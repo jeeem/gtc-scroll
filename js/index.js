@@ -24,6 +24,18 @@ const initSmoothScrolling = () => {
   requestAnimationFrame(scrollFn);
 };
 
+// Button Scolls
+const scrollToContactUsBtns = document.querySelectorAll(".CTA-btn");
+
+scrollToContactUsBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    gsap.to(window, {
+      duration: 3,
+      scrollTo: ".contactSection",
+    });
+  });
+});
+
 // All elements with class .grid
 const grids = document.querySelectorAll(".grid");
 
@@ -436,6 +448,24 @@ tl3.to("#circleAnimation3", { clipPath: "circle(25vw at 50% 0%)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(50vw at 50% 0%)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(100vw at 50% 300px)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(10000px at 50% 300px)" });
+
+var tl4 = gsap.timeline(
+  /*{repeat: 2, repeatDelay: 1}*/
+  {
+    // yes, we can add it to an entire timeline!
+    scrollTrigger: {
+      trigger: "#circleAnimation4",
+      // pin: true, // pin the trigger element while active
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=400", // end after scrolling 500px beyond the start
+      // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+    },
+  }
+);
+tl4.to("#circleAnimation4", { clipPath: "circle(25vw at 50% 0%)" });
+tl4.to("#circleAnimation4", { clipPath: "circle(50vw at 50% 0%)" });
+tl4.to("#circleAnimation4", { clipPath: "circle(100vw at 50% 300px)" });
+tl4.to("#circleAnimation4", { clipPath: "circle(10000px at 50% 300px)" });
 // // then we can control the whole thing easily...
 // tl.pause();
 // tl.resume();
@@ -460,18 +490,6 @@ const scroll = () => {
       default:
         animationType = "type4";
         break;
-      //   case 3:
-      //     animationType = "type1";
-      //     console.log("cases 4");
-      //     break;
-      //   case 4:
-      //     animationType = "type5";
-      //     console.log("cases 5");
-      //     break;
-      //   case 5:
-      //     animationType = "type6";
-      //     console.log("cases 6");
-      //     break;
     }
     applyAnimation(grid, animationType);
   });

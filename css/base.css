@@ -362,6 +362,11 @@ body #cdawrap {
 #circleAnimation2 .first-header {
   color: black;
 }
+
+#circleAnimation4 .first-header {
+  margin-bottom: 100px;
+}
+
 .first-subheader {
   color: white;
   text-align: center;
@@ -375,6 +380,45 @@ body #cdawrap {
   text-align: center;
   font-weight: 300;
   font-size: 50px;
+}
+
+.CTA-btn.CTA-btn-inverse {
+  color: black;
+  border: 1px solid black;
+}
+
+.CTA-btn,
+.contact-btn {
+  position: absolute;
+  bottom: 50px;
+  transform: translateX(-50%);
+  left: 50%;
+  padding: 20px 25px;
+  background: transparent;
+  border-radius: 35px;
+  color: white;
+  border: 1px solid white;
+  font-size: 20px;
+}
+
+.CTA-btn:hover {
+  cursor: pointer;
+}
+
+.contactSection-form {
+  position: relative;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.contactSection-form textarea {
+  width: 75%;
+  height: 300px;
+  background: transparent;
+  font-size: 20px;
+  padding: 25px 20px;
+  border-radius: 20px;
+  border: 2px solid white;
 }
 
 .content__title--top {
