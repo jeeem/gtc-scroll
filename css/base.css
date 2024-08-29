@@ -312,6 +312,13 @@ body #cdawrap {
   font-weight: 300;
   font-size: clamp(1.5rem, 15vw, 6.5rem);
 }
+
+.section-tagline {
+  height: 100%;
+  width: 75%;
+  margin: 0 auto;
+}
+
 .text-container {
   padding-top: 300px;
   position: absolute;
@@ -324,6 +331,7 @@ body #cdawrap {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .text-container2 {
   padding-top: 300px;
   position: absolute;
@@ -338,16 +346,21 @@ body #cdawrap {
 }
 
 .text-container3 {
-  /* padding-top: 300px; */
+  padding-top: 1000px;
   position: absolute;
   height: 100%;
-  right: 12.5%;
+  right: 20px;
   top: 0;
-  width: 75%;
+  width: 50%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+#circleAnimation2 .first-subheader,
+#circleAnimation2 .first-header {
+  color: black;
 }
 .first-subheader {
   color: white;
@@ -355,6 +368,7 @@ body #cdawrap {
   font-weight: 300;
   font-size: 40px;
 }
+
 .first-header {
   color: white;
   margin-bottom: 400px;

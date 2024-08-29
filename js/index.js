@@ -327,7 +327,7 @@ const applyAnimation = (grid, animationType) => {
       grid.style.setProperty("--grid-width", "50%");
       grid.style.setProperty("--perspective", "3000px");
       grid.style.setProperty("--grid-item-ratio", "0.8");
-      grid.style.setProperty("--grid-columns", "3");
+      grid.style.setProperty("--grid-columns", "4");
       grid.style.setProperty("--grid-gap", "1vw");
 
       timeline
@@ -387,7 +387,8 @@ var tl1 = gsap.timeline(
     // yes, we can add it to an entire timeline!
     scrollTrigger: {
       trigger: "#circleAnimation1",
-      // pin: true, // pin the trigger element while active
+
+      //   pin: true, // pin the trigger element while active
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       end: "+=400", // end after scrolling 500px beyond the start
       // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
@@ -412,10 +413,29 @@ var tl2 = gsap.timeline(
     },
   }
 );
+tl2.to("#circleAnimation2", { backgroundColor: "white" });
 tl2.to("#circleAnimation2", { clipPath: "circle(25vw at 50% 0%)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(50vw at 50% 0%)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(100vw at 50% 300px)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(10000px at 50% 300px)" });
+
+var tl3 = gsap.timeline(
+  /*{repeat: 2, repeatDelay: 1}*/
+  {
+    // yes, we can add it to an entire timeline!
+    scrollTrigger: {
+      trigger: "#circleAnimation3",
+      // pin: true, // pin the trigger element while active
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=400", // end after scrolling 500px beyond the start
+      // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+    },
+  }
+);
+tl3.to("#circleAnimation3", { clipPath: "circle(25vw at 50% 0%)" });
+tl3.to("#circleAnimation3", { clipPath: "circle(50vw at 50% 0%)" });
+tl3.to("#circleAnimation3", { clipPath: "circle(100vw at 50% 300px)" });
+tl3.to("#circleAnimation3", { clipPath: "circle(10000px at 50% 300px)" });
 // // then we can control the whole thing easily...
 // tl.pause();
 // tl.resume();
