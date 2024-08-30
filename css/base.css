@@ -343,7 +343,7 @@ body #cdawrap {
 }
 
 .text-container2 {
-  padding-top: 300px;
+  padding-top: 650px;
   position: absolute;
   height: 100%;
   left: 20px;
@@ -356,7 +356,7 @@ body #cdawrap {
 }
 
 .text-container3 {
-  padding-top: 1000px;
+  padding-top: 750px;
   position: absolute;
   height: 100%;
   right: 20px;
@@ -386,7 +386,7 @@ body #cdawrap {
 
 .first-header {
   color: white;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
   text-align: center;
   font-weight: 300;
   font-size: 50px;

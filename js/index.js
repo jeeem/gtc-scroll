@@ -327,7 +327,7 @@ const applyAnimation = (grid, animationType) => {
       grid.style.setProperty("--grid-width", "50%");
       grid.style.setProperty("--perspective", "3000px");
       grid.style.setProperty("--grid-item-ratio", "0.8");
-      grid.style.setProperty("--grid-columns", "4");
+      grid.style.setProperty("--grid-columns", "3");
       grid.style.setProperty("--grid-gap", "1vw");
 
       timeline
@@ -490,16 +490,8 @@ preloadImages(".grid__item-inner").then(() => {
   document.body.classList.remove("loading");
 });
 
-// let bodyRef = document.querySelector("body");
-// let nav1 = document.querySelector("#nav1");
-// let nav1Target = document.querySelector("#circleAnimation1");
-// let nav2 = document.querySelector("#nav2");
-// let nav2Target = document.querySelector("#circleAnimation2");
-// let nav3 = document.querySelector("#nav3");
-// let nav3Target = document.querySelector("#circleAnimation3");
-// let nav4 = document.querySelector("#nav4");
-// let nav4Target = document.querySelector("#circleAnimation4");
-
+// Scroll to feature
+// Add class "scrollTo-[id]"
 const scrollToBtns = document.querySelectorAll("[class*='scrollTo-']");
 
 function getTargetElement(classList) {
@@ -525,45 +517,3 @@ scrollToBtns.forEach((btn) => {
     false
   );
 });
-
-// nav1.addEventListener(
-//   "click",
-//   function (e) {
-//     let bodyRect = bodyRef.getBoundingClientRect();
-//     let targetRect = nav1Target.getBoundingClientRect();
-//     window.scroll({
-//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
-//       left: 0,
-//       behavior: "smooth",
-//     });
-//   },
-//   false
-// );
-
-// nav2.addEventListener(
-//   "click",
-//   function (e) {
-//     let bodyRect = bodyRef.getBoundingClientRect();
-//     let targetRect = nav2Target.getBoundingClientRect();
-//     window.scroll({
-//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
-//       left: 0,
-//       behavior: "smooth",
-//     });
-//   },
-//   false
-// );
-
-// nav3.addEventListener(
-//   "click",
-//   function (e) {
-//     let bodyRect = bodyRef.getBoundingClientRect();
-//     let targetRect = nav3Target.getBoundingClientRect();
-//     window.scroll({
-//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
-//       left: 0,
-//       behavior: "smooth",
-//     });
-//   },
-//   false
-// );
