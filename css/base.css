@@ -145,6 +145,7 @@ main {
   position: relative;
   overflow: hidden;
   width: 100%;
+  margin-top: -117px;
 }
 
 .frame {
@@ -514,15 +515,15 @@ body #cdawrap {
 }
 
 .nav-outer {
+  position: sticky;
   align-items: center;
   display: flex;
   left: 0;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 50px;
-  position: absolute;
+  padding: 50px 40px 20px 40px;
   right: 0;
   top: 0;
+  z-index: 9999999;
+  background: linear-gradient(transparent 5%, black 100%);
 }
 .nav-top-left {
   margin-right: auto;
