@@ -387,15 +387,15 @@ var tl1 = gsap.timeline(
     // yes, we can add it to an entire timeline!
     scrollTrigger: {
       trigger: "#circleAnimation1",
-
       //   pin: true, // pin the trigger element while active
-      start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      // toggleActions: "play none none pause",
+      start: "top +=200", // when the top of the trigger hits the top of the viewport
+      end: "+=800", // end after scrolling 500px beyond the start
       // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
-tl1.to("#circleAnimation1", { clipPath: "circle(25vw at 50% 0%)" });
+tl1.to("#circleAnimation1", { clipPath: "circle(25vw at 50% 20%)" });
 tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 0%)" });
 tl1.to("#circleAnimation1", { clipPath: "circle(100vw at 50% 300px)" });
 tl1.to("#circleAnimation1", { clipPath: "circle(10000px at 50% 300px)" });
@@ -407,14 +407,14 @@ var tl2 = gsap.timeline(
     scrollTrigger: {
       trigger: "#circleAnimation2",
       // pin: true, // pin the trigger element while active
-      start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      start: "top +=200", // when the top of the trigger hits the top of the viewport
+      end: "+=800", // end after scrolling 500px beyond the start
       // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
 tl2.to("#circleAnimation2", { backgroundColor: "white" });
-tl2.to("#circleAnimation2", { clipPath: "circle(25vw at 50% 0%)" });
+tl2.to("#circleAnimation2", { clipPath: "circle(25vw at 50% 20%)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(50vw at 50% 0%)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(100vw at 50% 300px)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(10000px at 50% 300px)" });
@@ -426,13 +426,13 @@ var tl3 = gsap.timeline(
     scrollTrigger: {
       trigger: "#circleAnimation3",
       // pin: true, // pin the trigger element while active
-      start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      start: "top +=200", // when the top of the trigger hits the top of the viewport
+      end: "+=800", // end after scrolling 500px beyond the start
       // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
-tl3.to("#circleAnimation3", { clipPath: "circle(25vw at 50% 0%)" });
+tl3.to("#circleAnimation3", { clipPath: "circle(25vw at 50% 20%)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(50vw at 50% 0%)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(100vw at 50% 300px)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(10000px at 50% 300px)" });
@@ -444,13 +444,13 @@ var tl4 = gsap.timeline(
     scrollTrigger: {
       trigger: "#circleAnimation4",
       // pin: true, // pin the trigger element while active
-      start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      start: "top +=200", // when the top of the trigger hits the top of the viewport
+      end: "+=800", // end after scrolling 500px beyond the start
       // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
-tl4.to("#circleAnimation4", { clipPath: "circle(25vw at 50% 0%)" });
+tl4.to("#circleAnimation4", { clipPath: "circle(25vw at 50% 20%)" });
 tl4.to("#circleAnimation4", { clipPath: "circle(50vw at 50% 0%)" });
 tl4.to("#circleAnimation4", { clipPath: "circle(100vw at 50% 300px)" });
 tl4.to("#circleAnimation4", { clipPath: "circle(10000px at 50% 300px)" });
