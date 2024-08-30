@@ -1,68 +1,201 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>GTC</title>
-		<meta name="description" content="On-scroll animations for perspective image grids with different layouts." />
-		<meta name="keywords" content="on scroll animation, 3d, image grid, perspective, gsap, javascript, css grid" />
-		<meta name="author" content="Codrops" />
-		<link rel="stylesheet" href="https://use.typekit.net/hky5sxh.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-	</head>
-	<body class="loading">
-		<main>
-			<div class="fullscreen-div">
-				<div class="nav-outer">
-					<div class="nav-top-left">
-						<img src="img/gtc-word.svg" />
-					</div>
-					<div class="nav-top-center">
-						<div id="nav1" class="nav-link">Tour Branding</div>
-						<div id="nav2" class="nav-link">Venues</div>
-						<div id="nav3" class="nav-link">Promoters</div>
-						<div class="nav-link">Contact</div>
-					</div>
-					<div class="nav-top-right">
-						<div class="nav-top-right-inner">
-							Order Now
-						</div>
-					</div>
-				</div>
-				<img class="center-logo" src="img/gtc-color.svg" />
-			</div>
-			<section id="circleAnimation1" class="content content--spacing circle-animation">
-				<div class="grid grid--5">
-					<div class="grid-wrap">
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/18.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/29.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/6.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/37.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/15.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/32.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/41.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/23.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/5.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/12.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/27.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/1.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/46.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/35.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/20.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/39.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/8.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/25.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/2.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/44.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/43.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/17.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/26.jpeg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/11.jpeg)"></div></div>
-						<!-- <div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/14.jpeg)"></div></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GTC</title>
+    <meta
+      name="description"
+      content="On-scroll animations for perspective image grids with different layouts."
+    />
+    <meta
+      name="keywords"
+      content="on scroll animation, 3d, image grid, perspective, gsap, javascript, css grid"
+    />
+    <meta name="author" content="Codrops" />
+    <link rel="stylesheet" href="https://use.typekit.net/hky5sxh.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+  </head>
+  <body class="loading">
+    <header class="nav-outer">
+      <div class="nav-top-left">
+        <img src="img/gtc-word.svg" />
+      </div>
+      <div class="nav-top-center">
+        <div class="nav-link scrollTo-circleAnimation1">Tour Branding</div>
+        <div class="nav-link scrollTo-circleAnimation2">Promoters</div>
+        <div class="nav-link scrollTo-circleAnimation3">Venues</div>
+        <div class="nav-link scrollTo-circleAnimation4">Contact</div>
+      </div>
+      <div class="nav-top-right">
+        <div class="nav-top-right-inner scrollTo-circleAnimation4">
+          Order Now
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="fullscreen-div">
+        <div class="fullscreen-div--gradient"></div>
+        <img class="center-logo" src="img/gtc-color.svg" />
+      </div>
+      <section
+        id="circleAnimation1"
+        class="content content--spacing circle-animation"
+      >
+        <div class="grid grid--5">
+          <div class="grid-wrap">
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/18.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/29.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/6.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/37.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/15.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/32.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/41.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/23.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/5.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/12.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/27.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/1.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/46.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/35.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/20.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/39.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/8.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/25.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/2.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/44.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/43.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/17.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/26.jpeg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner"
+                style="background-image: url(img/gtc-placeholders/11.jpeg)"
+              ></div>
+            </div>
+            <!-- <div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/14.jpeg)"></div></div>
 						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/7.jpeg)"></div></div>
 						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/33.jpeg)"></div></div>
 						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/30.jpeg)"></div></div>
@@ -86,146 +219,479 @@
 						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/47.jpeg)"></div></div>
 						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/45.jpeg)"></div></div>
 						<div class="grid__item"><div class="grid__item-inner" style="background-image:url(img/gtc-placeholders/48.jpeg)"></div></div> -->
-					</div>
-				</div>
-				<div class="text-container">
-					<div class="text-block">
-						<p class="first-subheader">Tour Branding</p>
-						<h3 class="first-header">Learn why over 80% of the Billboard Top 100 Tours choose GTC for brand development.</h3>
-					</div>
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="text-block">
+            <p class="first-subheader">Tour Branding</p>
+            <h3 class="first-header">
+              Learn why over 80% of the Billboard Top 100 Tours choose GTC for
+              brand development.
+            </h3>
+          </div>
 
-					<div class="text-block">
-						<p class="first-subheader">World Class Creatives</p>
-						<h3 class="first-header">Incorporating expert experience and current design trends within the live entertainment industry, our designs are fresh, eye popping and sure to grab attention.</h3>
-					</div>
+          <div class="text-block">
+            <p class="first-subheader">Speed and Availability</p>
+            <h3 class="first-header">
+              We utilize a team of 30+ professional production designers who
+              work across 4 different time zones to ensure coverage across all
+              hours of the day, meaning no last-minute needs are left unanswered
+            </h3>
+          </div>
 
-					<div class="text-block">
-						<p class="first-subheader">
-							Trusted with Relationships
-						</p>
-						<h3 class="first-header">
-							Over the last 12+ years, we have developed genuine relationships built on quality and reliability that has made us a trustworthy business partner around the globe
-						</h3>
-					</div>
+          <div class="text-block">
+            <p class="first-subheader">Worldwide Reach</p>
+            <h3 class="first-header">
+              With work that spans the globe, we are capable of handling all
+              your domestic and international needs.
+            </h3>
+          </div>
 
-					<div class="text-block">
-						<p class="first-subheader">
-							Speed and Availability
-						</p>
-						<h3 class="first-header">
-							We utilize a team of 30+ professional production designers who work across 4 different time zones to ensure coverage across all hours of the day, meaning no last-minute needs are left unanswered
-						</h3>
-					</div>
+          <!-- Lorem Ipsum -->
+          <div class="text-block">
+            <p class="first-subheader">Fugiat Nulla Pariatur.</p>
+            <h3 class="first-header">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum
+            </h3>
+          </div>
 
-					<div class="text-block">
-						<p class="first-subheader">
-							Worldwide Reach
-						</p>
-						<h3 class="first-header">
-							With work that spans the globe, we are capable of handling all your domestic and international needs.
-						</h3>
-					</div>
-				</div>
-				<!--<h3 class="content__title">An infinite universe<br> of moments unfolding</h3>-->
-			</section>
+          <!-- Lorem Ipsum -->
+          <div class="text-block">
+            <p class="first-subheader">Fugiat Nulla Pariatur.</p>
+            <h3 class="first-header">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum
+            </h3>
+          </div>
+        </div>
 
-			<section id="circleAnimation2" class="content content--spacing circle-animation">
-				<div class="grid grid--5">
-					<div class="grid-wrap">
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/1.png)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/2.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/3.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/4.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/5.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/6.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/7.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/8.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/9.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/10.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/11.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/12.png)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/13.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/14.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/15.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/16.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/17.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/18.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/19.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/20.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/21.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/22.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/23.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/24.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner2" style="background-image:url(img/promoters/25.jpg)"></div></div>
-					</div>
-				</div>
-				<div class="text-container2">
-					<div class="text-block">
-						<p class="first-subheader">
-							Promoters
-						</p>
-						<h3 class="first-header">
-							We can work directly with promoters to fulfill any and all show, festival, or corporate needs.
-						</h3>
-					</div>
+        <!--<h3 class="content__title">An infinite universe<br> of moments unfolding</h3>-->
+        <button id="button1" class="CTA-btn scrollTo-circleAnimation4">
+          TALK TO US TODAY ABOUT YOUR TOUR
+        </button>
+      </section>
 
-					<div id="scrollTarget3" class="text-block">
-						<p class="first-subheader">
-							Venues
-						</p>
-						<h3 class="first-header">
-							See why world-class venues like the <b>Kia Forum</b>, <b>Madison Square Garden</b>, and <b>Sphere</b> use GTC as their exclusive creative resource.
-						</h3>
-					</div>
-				</div>
+      <section style="background-color: black">
+        <div
+          id="circleAnimation2"
+          class="content content--spacing circle-animation"
+        >
+          <div class="section2-tagline section-tagline">
+            <div class="text-block">
+              <p class="first-subheader">Promoters</p>
+              <h3 class="first-header">
+                We can work directly with promoters to fulfill any and all show,
+                festival, or corporate needs.
+              </h3>
+            </div>
+          </div>
 
-				<!--<h3 class="content__title">An infinite universe<br> of moments unfolding</h3>-->
-			</section>
+          <div class="grid grid--5">
+            <div class="grid-wrap">
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/1.png)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/2.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/3.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/4.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/5.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/6.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/7.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/8.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/9.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/10.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/11.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/12.png)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/13.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/14.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/15.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/16.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/17.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/18.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/19.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/20.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/21.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/22.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/23.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/24.jpg)"
+                ></div>
+              </div>
+              <div class="grid__item">
+                <div
+                  class="grid__item-inner grid__item-inner2"
+                  style="background-image: url(img/promoters/25.jpg)"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-container2">
+            <div class="text-block">
+              <p class="first-subheader">World Class Creatives</p>
+              <h3 class="first-header">
+                Incorporating expert experience and current design trends within
+                the live entertainment industry, our designs are fresh, eye
+                popping and sure to grab attention.
+              </h3>
+            </div>
 
-			<section id="circleAnimation3" class="content content--spacing circle-animation">
-				<div class="grid grid--5">
-					<div class="grid-wrap">
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/1.png)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/2.png)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/3.png)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/4.png)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/5.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/6.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/7.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/8.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/9.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/10.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/11.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/12.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/13.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/14.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/15.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/16.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/17.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/18.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/19.jpg)"></div></div>
-						<div class="grid__item"><div class="grid__item-inner grid__item-inner3" style="background-image:url(img/venue/20.jpg)"></div></div>
-					</div>
-				</div>
-				<!-- <div class="text-container3">
-					<div class="text-block">
-						<p class="first-subheader">
-							Promoters
-						</p>
-						<h3 class="first-header">
-							We can work directly with promoters to fulfill any and all show, festival, or corporate needs.
-						</h3>
-					</div>
-				</div> -->
-				<!--<h3 class="content__title">An infinite universe<br> of moments unfolding</h3>-->
-			</section>
+            <div class="text-block">
+              <p class="first-subheader">Trusted with Relationships</p>
+              <h3 class="first-header">
+                Over the last 12+ years, we have developed genuine relationships
+                built on quality and reliability that has made us a trustworthy
+                business partner around the globe
+              </h3>
+            </div>
 
-		</main>
-		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
-		<script src="js/gsap.min.js"></script>
-		<script src="js/ScrollTrigger.min.js"></script>
-		<script src="js/lenis.min.js"></script>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script type="module" src="js/index.js"></script>
-	</body>
+            <!-- Lorem Ipsum -->
+            <div class="text-block">
+              <p class="first-subheader">Fugiat Nulla Pariatur.</p>
+              <h3 class="first-header">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum
+              </h3>
+            </div>
+
+            <!-- Lorem Ipsum -->
+            <div class="text-block">
+              <p class="first-subheader">Fugiat Nulla Pariatur.</p>
+              <h3 class="first-header">
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum
+              </h3>
+            </div>
+          </div>
+
+          <!--<h3 class="content__title">An infinite universe<br> of moments unfolding</h3>-->
+          <button class="CTA-btn CTA-btn-inverse scrollTo-circleAnimation4">
+            TALK TO US TODAY ABOUT HANDLING YOUR IN-HOUSE CREATIVE NEEDS
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="circleAnimation3"
+        class="content content--spacing circle-animation"
+      >
+        <div class="section3-tagline section-tagline">
+          <div class="text-block">
+            <p class="first-subheader">Venues</p>
+            <h3 class="first-header">
+              See why world-class venues like the <b>Kia Forum</b>,
+              <b>Madison Square Garden</b>, and <b>Sphere</b> use GTC as their
+              exclusive creative resource.
+            </h3>
+          </div>
+        </div>
+
+        <div class="grid grid--5">
+          <div class="grid-wrap">
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/1.png)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/2.png)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/3.png)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/4.png)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/5.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/6.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/7.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/8.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/9.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/10.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/11.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/12.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/13.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/14.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/15.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/16.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/17.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/18.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/19.jpg)"
+              ></div>
+            </div>
+            <div class="grid__item">
+              <div
+                class="grid__item-inner grid__item-inner3"
+                style="background-image: url(img/venue/20.jpg)"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-container3">
+          <div class="text-block">
+            <p class="first-subheader">Fan Experiences</p>
+            <h3 class="first-header">
+              Venue Signage<br />
+              Social Content<br />
+              Food & Drink Menus<br />
+              Venue & Parking Maps<br />
+              Calendars<br />
+              Fan Experiences
+            </h3>
+          </div>
+
+          <div class="text-block">
+            <p class="first-subheader">Venue Signage</p>
+            <h3 class="first-header">
+              Food & Drink Menus<br />
+              Social Content<br />
+              Venue & Parking Maps<br />
+              Calendars<br />
+              Fan Experiences<br />
+              Venue Signage
+            </h3>
+          </div>
+
+          <!-- Lorem Ipsum -->
+          <div class="text-block">
+            <p class="first-subheader">Fugiat Nulla Pariatur.</p>
+            <h3 class="first-header">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum
+            </h3>
+          </div>
+        </div>
+
+        <!--<h3 class="content__title">An infinite universe<br> of moments unfolding</h3>-->
+        <button class="CTA-btn scrollTo-circleAnimation4">
+          ELEVATE YOUR VENUE TODAY
+        </button>
+      </section>
+
+      <section
+        id="circleAnimation4"
+        class="contactSection content content--spacing circle-animation"
+      >
+        <div class="section4-tagline section-tagline">
+          <div class="text-block">
+            <p class="first-subheader">Contact</p>
+            <h3 class="first-header">
+              Let us know a little bit about of your scope of work and start a
+              conversation today!
+            </h3>
+          </div>
+        </div>
+
+        <div class="contactSection-form">
+          <textarea name="" id="" placeholder="Text here"></textarea>
+          <button class="contact-btn">Submit</button>
+        </div>
+      </section>
+    </main>
+    <script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
 </html>
