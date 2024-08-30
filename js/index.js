@@ -24,18 +24,6 @@ const initSmoothScrolling = () => {
   requestAnimationFrame(scrollFn);
 };
 
-// Button Scolls
-const scrollToContactUsBtns = document.querySelectorAll(".CTA-btn");
-
-scrollToContactUsBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    gsap.to(window, {
-      duration: 3,
-      scrollTo: ".contactSection",
-    });
-  });
-});
-
 // All elements with class .grid
 const grids = document.querySelectorAll(".grid");
 
@@ -502,52 +490,80 @@ preloadImages(".grid__item-inner").then(() => {
   document.body.classList.remove("loading");
 });
 
-let bodyRef = document.querySelector("body");
-let nav1 = document.querySelector("#nav1");
-let nav1Target = document.querySelector("#circleAnimation1");
-let nav2 = document.querySelector("#nav2");
-let nav2Target = document.querySelector("#circleAnimation2");
-let nav3 = document.querySelector("#nav3");
-let nav3Target = document.querySelector("#scrollTarget3");
+// let bodyRef = document.querySelector("body");
+// let nav1 = document.querySelector("#nav1");
+// let nav1Target = document.querySelector("#circleAnimation1");
+// let nav2 = document.querySelector("#nav2");
+// let nav2Target = document.querySelector("#circleAnimation2");
+// let nav3 = document.querySelector("#nav3");
+// let nav3Target = document.querySelector("#circleAnimation3");
+// let nav4 = document.querySelector("#nav4");
+// let nav4Target = document.querySelector("#circleAnimation4");
 
-nav1.addEventListener(
-  "click",
-  function (e) {
-    let bodyRect = bodyRef.getBoundingClientRect();
-    let targetRect = nav1Target.getBoundingClientRect();
-    window.scroll({
-      top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
-      left: 0,
-      behavior: "smooth",
-    });
-  },
-  false
-);
+const scrollToBtns = document.querySelectorAll("[class*='scrollTo-']");
 
-nav2.addEventListener(
-  "click",
-  function (e) {
-    let bodyRect = bodyRef.getBoundingClientRect();
-    let targetRect = nav2Target.getBoundingClientRect();
-    window.scroll({
-      top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
-      left: 0,
-      behavior: "smooth",
-    });
-  },
-  false
-);
+function getTargetElement(classList) {
+  const scrollToClass = classList.findIndex((element) =>
+    element.includes("scrollTo-")
+  );
+  return classList[scrollToClass].slice(9);
+}
 
-nav3.addEventListener(
-  "click",
-  function (e) {
-    let bodyRect = bodyRef.getBoundingClientRect();
-    let targetRect = nav3Target.getBoundingClientRect();
-    window.scroll({
-      top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
-      left: 0,
-      behavior: "smooth",
-    });
-  },
-  false
-);
+scrollToBtns.forEach((btn) => {
+  const targetElmClass = getTargetElement([...btn.classList]);
+  const targetElmHtml = document.querySelector(`#${targetElmClass}`);
+  btn.addEventListener(
+    "click",
+    function (e) {
+      let targetRect = targetElmHtml.offsetTop;
+      window.scroll({
+        top: targetRect,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    false
+  );
+});
+
+// nav1.addEventListener(
+//   "click",
+//   function (e) {
+//     let bodyRect = bodyRef.getBoundingClientRect();
+//     let targetRect = nav1Target.getBoundingClientRect();
+//     window.scroll({
+//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
+//       left: 0,
+//       behavior: "smooth",
+//     });
+//   },
+//   false
+// );
+
+// nav2.addEventListener(
+//   "click",
+//   function (e) {
+//     let bodyRect = bodyRef.getBoundingClientRect();
+//     let targetRect = nav2Target.getBoundingClientRect();
+//     window.scroll({
+//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
+//       left: 0,
+//       behavior: "smooth",
+//     });
+//   },
+//   false
+// );
+
+// nav3.addEventListener(
+//   "click",
+//   function (e) {
+//     let bodyRect = bodyRef.getBoundingClientRect();
+//     let targetRect = nav3Target.getBoundingClientRect();
+//     window.scroll({
+//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
+//       left: 0,
+//       behavior: "smooth",
+//     });
+//   },
+//   false
+// );
