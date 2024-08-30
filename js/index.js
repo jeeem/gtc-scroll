@@ -395,7 +395,7 @@ var tl1 = gsap.timeline(
     },
   }
 );
-tl1.to("#circleAnimation1", { clipPath: "circle(25vw at 50% 20%)" });
+tl1.to("#circleAnimation1", { clipPath: "circle(25vw at 50% 0%)" });
 tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 0%)" });
 tl1.to("#circleAnimation1", { clipPath: "circle(100vw at 50% 300px)" });
 tl1.to("#circleAnimation1", { clipPath: "circle(10000px at 50% 300px)" });
@@ -414,7 +414,7 @@ var tl2 = gsap.timeline(
   }
 );
 tl2.to("#circleAnimation2", { backgroundColor: "white" });
-tl2.to("#circleAnimation2", { clipPath: "circle(25vw at 50% 20%)" });
+tl2.to("#circleAnimation2", { clipPath: "circle(25vw at 50% 0%)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(50vw at 50% 0%)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(100vw at 50% 300px)" });
 tl2.to("#circleAnimation2", { clipPath: "circle(10000px at 50% 300px)" });
@@ -432,7 +432,7 @@ var tl3 = gsap.timeline(
     },
   }
 );
-tl3.to("#circleAnimation3", { clipPath: "circle(25vw at 50% 20%)" });
+tl3.to("#circleAnimation3", { clipPath: "circle(25vw at 50% 0%)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(50vw at 50% 0%)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(100vw at 50% 300px)" });
 tl3.to("#circleAnimation3", { clipPath: "circle(10000px at 50% 300px)" });
@@ -450,7 +450,7 @@ var tl4 = gsap.timeline(
     },
   }
 );
-tl4.to("#circleAnimation4", { clipPath: "circle(25vw at 50% 20%)" });
+tl4.to("#circleAnimation4", { clipPath: "circle(25vw at 50% 0%)" });
 tl4.to("#circleAnimation4", { clipPath: "circle(50vw at 50% 0%)" });
 tl4.to("#circleAnimation4", { clipPath: "circle(100vw at 50% 300px)" });
 tl4.to("#circleAnimation4", { clipPath: "circle(10000px at 50% 300px)" });
@@ -493,6 +493,8 @@ preloadImages(".grid__item-inner").then(() => {
 // Scroll to feature
 // Add class "scrollTo-[id]"
 const scrollToBtns = document.querySelectorAll("[class*='scrollTo-']");
+const bodyRef = document.querySelector("body");
+const bodyRect = Math.abs(Math.abs(bodyRef.getBoundingClientRect().y));
 
 function getTargetElement(classList) {
   const scrollToClass = classList.findIndex((element) =>
@@ -507,9 +509,10 @@ scrollToBtns.forEach((btn) => {
   btn.addEventListener(
     "click",
     function (e) {
-      let targetRect = targetElmHtml.offsetTop;
+      // let targetRect = Math.abs(targetElmHtml.getBoundingClientRect().y);
       window.scroll({
-        top: targetRect,
+        // top: bodyRect - targetRect,
+        top: targetElmHtml.offsetTop,
         left: 0,
         behavior: "smooth",
       });
@@ -517,3 +520,20 @@ scrollToBtns.forEach((btn) => {
     false
   );
 });
+
+// let bodyRef = document.querySelector("body");
+// let nav1 = document.querySelector("#nav1");
+// let nav1Target = document.querySelector("#circleAnimation1");
+
+// nav1.addEventListener(
+//   "click",
+//   function (e) {
+//     let targetRect = nav1Target.getBoundingClientRect();
+//     window.scroll({
+//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
+//       left: 0,
+//       behavior: "smooth",
+//     });
+//   },
+//   false
+// );
