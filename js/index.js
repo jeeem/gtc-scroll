@@ -4,6 +4,22 @@ import { preloadImages, getGrid } from "./utils.js";
 // Define a variable that will store the Lenis smooth scrolling object
 let lenis;
 
+// Document Selectors
+const firtSectionHTMLOffsetTop =
+  document.querySelector("#circleAnimation1").offsetTop;
+const mainHTML = document.querySelector("main");
+const navHTML = document.querySelector(".nav-outer");
+
+window.addEventListener("scroll", function () {
+  if (this.scrollY > firtSectionHTMLOffsetTop) {
+    navHTML.classList.add("sticky");
+    mainHTML.classList.add("with-sticky");
+  } else {
+    navHTML.classList.remove("sticky");
+    mainHTML.classList.remove("with-sticky");
+  }
+});
+
 // Function to initialize Lenis for smooth scrolling
 const initSmoothScrolling = () => {
   // Instantiate the Lenis object with specified properties
@@ -493,8 +509,6 @@ preloadImages(".grid__item-inner").then(() => {
 // Scroll to feature
 // Add class "scrollTo-[id]"
 const scrollToBtns = document.querySelectorAll("[class*='scrollTo-']");
-const bodyRef = document.querySelector("body");
-const bodyRect = Math.abs(Math.abs(bodyRef.getBoundingClientRect().y));
 
 function getTargetElement(classList) {
   const scrollToClass = classList.findIndex((element) =>
@@ -509,9 +523,7 @@ scrollToBtns.forEach((btn) => {
   btn.addEventListener(
     "click",
     function (e) {
-      // let targetRect = Math.abs(targetElmHtml.getBoundingClientRect().y);
       window.scroll({
-        // top: bodyRect - targetRect,
         top: targetElmHtml.offsetTop,
         left: 0,
         behavior: "smooth",
@@ -520,20 +532,3 @@ scrollToBtns.forEach((btn) => {
     false
   );
 });
-
-// let bodyRef = document.querySelector("body");
-// let nav1 = document.querySelector("#nav1");
-// let nav1Target = document.querySelector("#circleAnimation1");
-
-// nav1.addEventListener(
-//   "click",
-//   function (e) {
-//     let targetRect = nav1Target.getBoundingClientRect();
-//     window.scroll({
-//       top: Math.abs(Math.abs(bodyRect.y) - Math.abs(targetRect.y)),
-//       left: 0,
-//       behavior: "smooth",
-//     });
-//   },
-//   false
-// );

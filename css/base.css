@@ -2,7 +2,6 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 :root {
@@ -141,11 +140,14 @@ a:not(.card__image):focus-visible {
   outline: none;
 }
 
+main.with-sticky {
+  margin-top: -117px;
+}
+
 main {
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin-top: -117px;
 }
 
 .frame {
@@ -525,8 +527,12 @@ body #cdawrap {
   clip-path: circle(10vw at 50% 0%);
 }
 
-.nav-outer {
+.nav-outer.sticky {
   position: sticky;
+  padding: 20px 40px;
+}
+.nav-outer {
+  position: absolute;
   align-items: center;
   display: flex;
   left: 0;
@@ -535,6 +541,7 @@ body #cdawrap {
   top: 0;
   z-index: 9999999;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: padding-top 0.5s ease-in;
 }
 .nav-top-left {
   margin-right: auto;
