@@ -532,3 +532,25 @@ scrollToBtns.forEach((btn) => {
     false
   );
 });
+
+// Mobile Hamburger Menu
+const hamIconHTML = document.querySelector(".mobile-hamburger--icon");
+const mobileNavHTML = document.querySelector(".mobile-nav");
+const mobileScrollToBtns = document.querySelectorAll(
+  ".mobile-nav [class*='scrollTo-']"
+);
+const mobileNavX = document.querySelector(".mobile-nav-x--icon");
+
+mobileNavX.addEventListener("click", () => {
+  mobileNavHTML.classList.remove("active");
+});
+
+mobileScrollToBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    mobileNavHTML.classList.remove("active");
+  });
+});
+
+hamIconHTML.addEventListener("click", () => {
+  mobileNavHTML.classList.add("active");
+});
