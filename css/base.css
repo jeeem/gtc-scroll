@@ -435,6 +435,8 @@ body #cdawrap {
   padding: 25px 20px;
   border-radius: 20px;
   border: 2px solid white;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
 }
 
 .content__title--top {
@@ -498,14 +500,6 @@ body #cdawrap {
   background-repeat: no-repeat;
 }
 
-/* 
-???
-4g7eknvcus .grid__item-inner2 {
-  background-size: contain;
-  height: 60%;
-  width: 60%;
-} */
-
 .grid__item-inner3 {
   background-size: contain;
   height: 70%;
@@ -542,7 +536,7 @@ body #cdawrap {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
   transition: 0.3s ease;
 }
 
@@ -552,7 +546,9 @@ body #cdawrap {
 
 .nav-outer.sticky {
   position: sticky;
-  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: space-between;
+  padding: 20px 20px;
 }
 
 .nav-outer {
@@ -716,6 +712,7 @@ body #cdawrap {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
+    padding-top: 10%;
   }
 
   .text-container .text-block {
@@ -724,5 +721,10 @@ body #cdawrap {
 
   .text-container.text-container-section-2 .text-block {
     background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .CTA-btn,
+  .contact-btn {
+    font-size: 1rem;
   }
 }

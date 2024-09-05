@@ -4,7 +4,7 @@ import { preloadImages, getGrid } from "./utils.js";
 // Define a variable that will store the Lenis smooth scrolling object
 let lenis;
 
-// Document Selectors
+// Sticky Nav
 const firtSectionHTMLOffsetTop =
   document.querySelector("#circleAnimation1").offsetTop;
 const mainHTML = document.querySelector("main");
@@ -534,7 +534,7 @@ scrollToBtns.forEach((btn) => {
 });
 
 // Mobile Hamburger Menu
-const hamIconHTML = document.querySelector(".mobile-hamburger--icon");
+const hamburgerIconHTML = document.querySelector(".mobile-hamburger--icon");
 const mobileNavHTML = document.querySelector(".mobile-nav");
 const mobileScrollToBtns = document.querySelectorAll(
   ".mobile-nav [class*='scrollTo-']"
@@ -551,6 +551,25 @@ mobileScrollToBtns.forEach((btn) => {
   });
 });
 
-hamIconHTML.addEventListener("click", () => {
+hamburgerIconHTML.addEventListener("click", () => {
   mobileNavHTML.classList.add("active");
+});
+
+// Resize galery text content to fit in mobile
+const textContainerHtmls = document.querySelectorAll(".text-container");
+const gallerySectionHtmls = document.querySelectorAll(".gallery-section");
+const isMobileScreen = window.screen.width < "900px";
+
+function resizegallerySections() {
+  gallerySectionHtmls.forEach((section, i) => {
+    const textContainerHeight =
+      textContainerHtmls[i].getBoundingClientRect().height;
+    section.style.minHeight = `${textContainerHeight * 1.25}px`;
+    console.log(section.style.minHeight);
+  });
+}
+
+if (isMobileScreen) window.onload = resizegallerySections();
+window.addEventListener("resize", function () {
+  if (isMobileScreen) resizegallerySections();
 });
