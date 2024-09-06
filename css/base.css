@@ -553,7 +553,7 @@ body #cdawrap {
 
 #circleAnimation1 {
   /* clip-path: circle(50vw at 50% 50vw); */
-  clip-path: ellipse(80vw 50vw at 50% 50vw);
+  clip-path: ellipse(50vw 50vw at 50% 50vw);
   padding-top: 500px;
 }
 
@@ -565,12 +565,12 @@ body #cdawrap {
 }
 #circleAnimation2 {
   /* clip-path: circle(50vw at 50% 60vw); */
-  clip-path: ellipse(80vw 50vw at 50% 50vw);
+  clip-path: ellipse(50vw 50vw at 50% 50vw);
 }
 
 #circleAnimation3 {
   /* clip-path: circle(50vw at 50% 60vw); */
-  clip-path: ellipse(80vw 50vw at 50% 50vw);
+  clip-path: ellipse(50vw 50vw at 50% 50vw);
 }
 #circleAnimation4 {
   /* clip-path: circle(50vw at 50% 60vw); */
