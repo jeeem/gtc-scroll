@@ -421,7 +421,6 @@ tl1.to("#circleAnimation1", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" }
 // tl1.to("#circleAnimation1", { clipPath: "circle(100vw at 50% 50vw)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(10000px at 50% 50vw)" });
 
-
 // tl1.to("#circleAnimation1", { clipPath: "circle(25vw at 50% 0%)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 0%)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(100vw at 50% 300px)" });
@@ -606,4 +605,24 @@ formBtn.addEventListener("click", (e) => {
   e.preventDefault();
   form.classList.toggle("hide");
   formSuccessMessage.classList.toggle("hide");
+});
+
+// Venues text Animation
+const venueText = gsap.utils.toArray(
+  ".text-container-section-3 .text-section-content"
+);
+const venueTextTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#circleAnimation3 .text-block",
+    start: "top center", // when the top of the trigger hits the top of the viewport
+    end: "bottom center", // end after scrolling 500px beyond the start
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+venueText.forEach((textBox) => {
+  venueTextTL.from(textBox, { fontWeight: 300 });
+  venueTextTL.to(textBox, { fontWeight: 600 });
+  venueTextTL.to(textBox, { fontWeight: 300, delay: 3 });
 });
