@@ -623,7 +623,7 @@ const venueTextTL = gsap.timeline({
     start: "top center", // when the top of the trigger hits the top of the viewport
     end: "bottom center", // end after scrolling 500px beyond the start
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
