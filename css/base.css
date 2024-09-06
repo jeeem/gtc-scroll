@@ -45,7 +45,7 @@ body {
   background-position: center center;
   background-size: cover;
   display: flex;
-  height: 80vh;
+  height: calc(100vh - 150px);
   justify-content: space-around;
   position: relative;
 }

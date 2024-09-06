@@ -406,8 +406,8 @@ var tl1 = gsap.timeline(
       //   pin: true, // pin the trigger element while active
       // toggleActions: "play none none pause",
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=500", // end after scrolling 500px beyond the start
-      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      end: "+=300", // end after scrolling 500px beyond the start
+      // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
@@ -415,10 +415,13 @@ tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
-tl1.to("#circleAnimation1", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
-tl1.to("#circleAnimation1", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
-tl1.to("#circleAnimation1", { clipPath: "ellipse(400vw 400vw at 50% 50vw)" });
-tl1.to("#circleAnimation1", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+
+tl1.to("#circleAnimation1", { clipPath: "ellipse(75vw 75vw at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(150vw 150vw at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(300vw 300vw at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(800px 800px at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(2000px 2000px at 50% 50vw)" });
 
 // tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 50vw)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(75vw at 50% 50vw)" });
@@ -439,23 +442,23 @@ var tl2 = gsap.timeline(
       // pin: true, // pin the trigger element while active
       start: "top bottom", // when the top of the trigger hits the top of the viewport
       end: "+=300", // end after scrolling 500px beyond the start
-      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
 tl2.to("#circleAnimation2", { backgroundColor: "white" });
-// tl2.to("#circleAnimation2", { clipPath: "circle(50vw at 50% 60vw)" });
-// tl2.to("#circleAnimation2", { clipPath: "circle(75vw at 50% 50vw)" });
-// tl2.to("#circleAnimation2", { clipPath: "circle(100vw at 50% 50vw)" });
-// tl2.to("#circleAnimation2", { clipPath: "circle(10000px at 50% 50vw)" });
+
 tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
-tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
-tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
-tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(60vw 60vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(70vw 70vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(80vw 80vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(90vw 90vw at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
-tl2.to("#circleAnimation2", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
-tl2.to("#circleAnimation2", { clipPath: "ellipse(400vw 400vw at 50% 50vw)" });
-tl2.to("#circleAnimation2", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(150vw 150vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(300vw 300vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(800px 800px at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(2000px 2000px at 50% 50vw)" });
+
 
 var tl3 = gsap.timeline(
   /*{repeat: 2, repeatDelay: 1}*/
@@ -465,23 +468,22 @@ var tl3 = gsap.timeline(
       trigger: "#circleAnimation3",
       // pin: true, // pin the trigger element while active
       start: "top bottom", // when the top of the trigger hits the top of the viewport
-      end: "+=300", // end after scrolling 500px beyond the start
-      scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+      end: "+=500", // end after scrolling 500px beyond the start
+      // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
-// tl3.to("#circleAnimation3", { clipPath: "circle(50vw at 50% 60vw)" });
-// tl3.to("#circleAnimation3", { clipPath: "circle(75vw at 50% 50vw)" });
-// tl3.to("#circleAnimation3", { clipPath: "circle(100vw at 50% 50vw)" });
-// tl3.to("#circleAnimation3", { clipPath: "circle(10000px at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
-tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
-tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
-tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(60vw 60vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(70vw 70vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(80vw 80vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(90vw 90vw at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
-tl3.to("#circleAnimation3", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
-tl3.to("#circleAnimation3", { clipPath: "ellipse(400vw 400vw at 50% 50vw)" });
-tl3.to("#circleAnimation3", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(150vw 150vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(300vw 300vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(800px 800px at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(2000px 2000px at 50% 50vw)" });
+
 
 // var tl4 = gsap.timeline(
 //   /*{repeat: 2, repeatDelay: 1}*/
