@@ -508,7 +508,7 @@ const scroll = () => {
         animationType = "type7";
         break;
       case 2:
-        animationType = "type4";
+        animationType = "type7";
         break;
       default:
         animationType = "type4";
