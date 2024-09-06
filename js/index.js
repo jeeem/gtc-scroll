@@ -437,8 +437,8 @@ var tl2 = gsap.timeline(
     scrollTrigger: {
       trigger: "#circleAnimation2",
       // pin: true, // pin the trigger element while active
-      start: "top 300px", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
@@ -464,8 +464,8 @@ var tl3 = gsap.timeline(
     scrollTrigger: {
       trigger: "#circleAnimation3",
       // pin: true, // pin the trigger element while active
-      start: "top 300px", // when the top of the trigger hits the top of the viewport
-      end: "+=400", // end after scrolling 500px beyond the start
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
