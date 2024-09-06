@@ -422,6 +422,7 @@ body #cdawrap {
   color: white;
   border: 1px solid white;
   font-size: 20px;
+  margin-bottom: 70px;
 }
 
 .contactForm--form-message {
