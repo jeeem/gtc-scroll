@@ -383,6 +383,13 @@ body #cdawrap {
   padding-bottom: 300px;
 }
 
+.gallery-section--gallery3 .text-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .text-container-section-3 .text-block {
   width: 100%;
   max-width: 460px;
