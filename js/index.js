@@ -630,12 +630,12 @@ const venueTextTL = gsap.timeline({
     start: "top center", // when the top of the trigger hits the top of the viewport
     end: "bottom center", // end after scrolling 500px beyond the start
     scrub: 1,
-    // markers: true,
+    markers: true,
   },
 });
 
 venueText.forEach((textBox) => {
-  venueTextTL.from(textBox, { fontWeight: 300 });
-  venueTextTL.to(textBox, { fontWeight: 600 });
-  venueTextTL.to(textBox, { fontWeight: 300, delay: 3 });
+  venueTextTL.from(textBox, { opacity: 0, x: -20 });
+  venueTextTL.to(textBox, { opacity: 1, x: 20 });
+  venueTextTL.to(textBox, { opacity: 0, x: -20, delay: 3 });
 });
