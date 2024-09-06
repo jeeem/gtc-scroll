@@ -380,7 +380,10 @@ body #cdawrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 300px;
+}
+
+.gallery-section--gallery3 {
+  position: relative;
 }
 
 .gallery-section--gallery3 .text-block {

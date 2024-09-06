@@ -626,11 +626,11 @@ const venueText = gsap.utils.toArray(
 );
 const venueTextTL = gsap.timeline({
   scrollTrigger: {
-    trigger: "#circleAnimation3 .text-block",
-    start: "top center", // when the top of the trigger hits the top of the viewport
-    end: "bottom center", // end after scrolling 500px beyond the start
+    trigger: "#circleAnimation3 .text-container-section-3 .text-block",
+    start: "-=300 +=200", // when the top of the trigger hits the top of the viewport
+    end: "bottom +=200", // end after scrolling 500px beyond the start
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
