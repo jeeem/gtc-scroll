@@ -41,7 +41,7 @@ body {
 
 .fullscreen-div {
   align-items: center;
-  background-image: url("img/landing-image.jpg");
+  background-image: url("../img/landing-image.jpg");
   background-position: center center;
   background-size: cover;
   display: flex;
