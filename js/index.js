@@ -414,13 +414,14 @@ var tl1 = gsap.timeline(
 tl1.to("#circleAnimation1", { clipPath: "ellipse(80vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(100vw 80vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
-tl1.to("#circleAnimation1", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
+tl1.to("#circleAnimation1", {
+  clipPath: "ellipse(10000px 10000px at 50% 50vw)",
+});
 
 // tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 50vw)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(75vw at 50% 50vw)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(100vw at 50% 50vw)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(10000px at 50% 50vw)" });
-
 
 // tl1.to("#circleAnimation1", { clipPath: "circle(25vw at 50% 0%)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 0%)" });
@@ -448,7 +449,9 @@ tl2.to("#circleAnimation2", { backgroundColor: "white" });
 tl1.to("#circleAnimation2", { clipPath: "ellipse(80vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation2", { clipPath: "ellipse(100vw 80vw at 50% 50vw)" });
 tl1.to("#circleAnimation2", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
-tl1.to("#circleAnimation2", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
+tl1.to("#circleAnimation2", {
+  clipPath: "ellipse(10000px 10000px at 50% 50vw)",
+});
 
 var tl3 = gsap.timeline(
   /*{repeat: 2, repeatDelay: 1}*/
@@ -470,7 +473,9 @@ var tl3 = gsap.timeline(
 tl1.to("#circleAnimation3", { clipPath: "ellipse(80vw 50vw at 50% 60vw)" });
 tl1.to("#circleAnimation3", { clipPath: "ellipse(100vw 80vw at 50% 60vw)" });
 tl1.to("#circleAnimation3", { clipPath: "ellipse(100vw 100vw at 50% 60vw)" });
-tl1.to("#circleAnimation3", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
+tl1.to("#circleAnimation3", {
+  clipPath: "ellipse(10000px 10000px at 50% 50vw)",
+});
 
 // var tl4 = gsap.timeline(
 //   /*{repeat: 2, repeatDelay: 1}*/
@@ -618,7 +623,7 @@ const venueTextTL = gsap.timeline({
     start: "top center", // when the top of the trigger hits the top of the viewport
     end: "bottom center", // end after scrolling 500px beyond the start
     scrub: 1,
-    // markers: true,
+    markers: true,
   },
 });
 
