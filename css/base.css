@@ -770,6 +770,10 @@ body #cdawrap {
     padding-top: 10%;
   }
 
+  .text-container-section-3 .text-section-content {
+    font-size: 1.5rem !important;
+  }
+
   #circleAnimation1 .text-container {
     padding-top: 200px;
   }
