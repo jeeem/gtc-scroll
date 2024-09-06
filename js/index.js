@@ -405,12 +405,15 @@ var tl1 = gsap.timeline(
       trigger: "#circleAnimation1",
       //   pin: true, // pin the trigger element while active
       // toggleActions: "play none none pause",
-      start: "top 300px", // when the top of the trigger hits the top of the viewport
-      end: "+=300", // end after scrolling 500px beyond the start
+      start: "top bottom", // when the top of the trigger hits the top of the viewport
+      end: "+=500", // end after scrolling 500px beyond the start
       scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
   }
 );
+tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
@@ -446,6 +449,9 @@ tl2.to("#circleAnimation2", { backgroundColor: "white" });
 // tl2.to("#circleAnimation2", { clipPath: "circle(100vw at 50% 50vw)" });
 // tl2.to("#circleAnimation2", { clipPath: "circle(10000px at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(400vw 400vw at 50% 50vw)" });
@@ -468,6 +474,9 @@ var tl3 = gsap.timeline(
 // tl3.to("#circleAnimation3", { clipPath: "circle(75vw at 50% 50vw)" });
 // tl3.to("#circleAnimation3", { clipPath: "circle(100vw at 50% 50vw)" });
 // tl3.to("#circleAnimation3", { clipPath: "circle(10000px at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(50vw 50vw at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
