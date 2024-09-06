@@ -35,6 +35,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hide {
+  display: none !important;
+}
+
 .fullscreen-div {
   align-items: center;
   background-image: url("/img/landing-image.jpg");
@@ -138,6 +142,10 @@ a:not(.card__image):focus-visible {
 
 .unbutton:focus {
   outline: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 main.with-sticky {
@@ -403,8 +411,7 @@ body #cdawrap {
   border: 1px solid black;
 }
 
-.CTA-btn,
-.contact-btn {
+.CTA-btn {
   position: absolute;
   bottom: 50px;
   transform: translateX(-50%);
@@ -417,19 +424,22 @@ body #cdawrap {
   font-size: 20px;
 }
 
-.CTA-btn:hover {
-  cursor: pointer;
+.contactForm--form-message {
+  text-align: center;
 }
 
-.contactSection-form {
-  position: relative;
+.contactForm--form-message form {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding-bottom: 150px;
+  max-width: 65%;
+  margin: 0 auto;
+  gap: 20px;
 }
 
-.contactSection-form textarea {
-  width: 75%;
-  height: 300px;
+.contactForm--form-message form input,
+.contactForm--form-message form textarea {
   background: transparent;
   font-size: 20px;
   padding: 25px 20px;
@@ -439,7 +449,27 @@ body #cdawrap {
   font-family: "Work Sans", sans-serif;
 }
 
-.content__title--top {
+.contactForm--form-message form textarea {
+  height: 300px;
+}
+
+.contactForm--form-message form button.contact-btn {
+  padding: 20px 25px;
+  background: transparent;
+  border-radius: 35px;
+  color: white;
+  border: 1px solid white;
+  font-size: 20px;
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* .form-success {
+  display: none;
+} */
+
+.form-success .content__title--top {
   align-items: start;
 }
 
@@ -721,6 +751,10 @@ body #cdawrap {
 
   .text-container.text-container-section-2 .text-block {
     background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .contactForm--form-message form {
+    max-width: 90%;
   }
 
   .CTA-btn,

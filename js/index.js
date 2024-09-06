@@ -573,3 +573,18 @@ if (isMobileScreen) window.onload = resizegallerySections();
 window.addEventListener("resize", function () {
   if (isMobileScreen) resizegallerySections();
 });
+
+// Contact for submit
+const form = document.querySelector(".contactForm--form-message form");
+const formBtn = document.querySelector(
+  ".contactForm--form-message .contact-btn"
+);
+const formSuccessMessage = document.querySelector(
+  ".contactForm--form-message .form-success"
+);
+
+formBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  form.classList.toggle("hide");
+  formSuccessMessage.classList.toggle("hide");
+});
