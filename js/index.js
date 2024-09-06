@@ -413,7 +413,7 @@ var tl1 = gsap.timeline(
 );
 tl1.to("#circleAnimation1", { clipPath: "ellipse(80vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(100vw 80vw at 50% 50vw)" });
-tl1.to("#circleAnimation1", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
 
 // tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 50vw)" });
@@ -434,7 +434,7 @@ var tl2 = gsap.timeline(
     scrollTrigger: {
       trigger: "#circleAnimation2",
       // pin: true, // pin the trigger element while active
-      start: "top +=300px", // when the top of the trigger hits the top of the viewport
+      start: "top 300px", // when the top of the trigger hits the top of the viewport
       end: "+=400", // end after scrolling 500px beyond the start
       // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
@@ -447,7 +447,7 @@ tl2.to("#circleAnimation2", { backgroundColor: "white" });
 // tl2.to("#circleAnimation2", { clipPath: "circle(10000px at 50% 50vw)" });
 tl1.to("#circleAnimation2", { clipPath: "ellipse(80vw 50vw at 50% 50vw)" });
 tl1.to("#circleAnimation2", { clipPath: "ellipse(100vw 80vw at 50% 50vw)" });
-tl1.to("#circleAnimation2", { clipPath: "ellipse(100vw 100vw at 50% 50vw)" });
+tl1.to("#circleAnimation2", { clipPath: "ellipse(200vw 200vw at 50% 50vw)" });
 tl1.to("#circleAnimation2", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
 
 var tl3 = gsap.timeline(
@@ -457,7 +457,7 @@ var tl3 = gsap.timeline(
     scrollTrigger: {
       trigger: "#circleAnimation3",
       // pin: true, // pin the trigger element while active
-      start: "top +=300px", // when the top of the trigger hits the top of the viewport
+      start: "top 300px", // when the top of the trigger hits the top of the viewport
       end: "+=400", // end after scrolling 500px beyond the start
       // scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
     },
