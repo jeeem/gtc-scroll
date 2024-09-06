@@ -369,7 +369,7 @@ body #cdawrap {
 }
 
 .text-container-section-3 {
-  padding-top: 750px;
+  padding-top: 150px;
   position: absolute;
   height: 100%;
   left: 20px;
@@ -380,6 +380,18 @@ body #cdawrap {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 300px;
+}
+
+.text-container-section-3 .text-block {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.text-container-section-3 .text-block .text-section-content {
+  color: white;
+  font-weight: 300;
+  font-size: 40px;
+  margin: 5px;
 }
 
 #circleAnimation2 .first-subheader,

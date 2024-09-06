@@ -588,3 +588,23 @@ formBtn.addEventListener("click", (e) => {
   form.classList.toggle("hide");
   formSuccessMessage.classList.toggle("hide");
 });
+
+// Venues text Animation
+const venueText = gsap.utils.toArray(
+  ".text-container-section-3 .text-section-content"
+);
+const venueTextTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#circleAnimation3 .text-block",
+    start: "top center", // when the top of the trigger hits the top of the viewport
+    end: "bottom center", // end after scrolling 500px beyond the start
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+venueText.forEach((textBox) => {
+  venueTextTL.from(textBox, { fontWeight: 300 });
+  venueTextTL.to(textBox, { fontWeight: 600 });
+  venueTextTL.to(textBox, { fontWeight: 300, delay: 3 });
+});
