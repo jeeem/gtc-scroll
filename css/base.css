@@ -7,7 +7,7 @@
 :root {
   font-size: 16px;
   --color-text: #fff;
-  --color-bg: #fff;
+  --color-bg: #272324;
   --color-link: #fff;
   --color-link-hover: #907030;
   --color-title: #907030;
@@ -51,14 +51,14 @@ body {
 }
 
 .fullscreen-div--gradient {
-  background: linear-gradient(transparent 50%, #fff 100%);
+  background: linear-gradient(transparent 50%, #272324 100%);
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
 .circle-animation {
-  background-color: black;
+  background-color: #272324;
   padding-top: calc(25vh);
 }
 
@@ -406,10 +406,10 @@ body #cdawrap {
   margin: 5px;
 }
 
-#circleAnimation2 .first-subheader,
+/* #circleAnimation2 .first-subheader,
 #circleAnimation2 .first-header {
   color: black;
-}
+} */
 
 #circleAnimation4 .first-header {
   margin-bottom: 100px;
@@ -430,10 +430,10 @@ body #cdawrap {
   font-size: 40px;
 }
 
-.CTA-btn.CTA-btn-inverse {
+/* .CTA-btn.CTA-btn-inverse {
   color: black;
   border: 1px solid black;
-}
+} */
 
 .CTA-btn {
   position: absolute;
@@ -563,7 +563,7 @@ body #cdawrap {
 
 #circleAnimation1 {
   /* clip-path: circle(50vw at 50% 50vw); */
-  clip-path: ellipse(50vw 50vw at 50% 50vw);
+  /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
   padding-top: 500px;
 }
 
@@ -575,12 +575,12 @@ body #cdawrap {
 }
 #circleAnimation2 {
   /* clip-path: circle(50vw at 50% 60vw); */
-  clip-path: ellipse(50vw 50vw at 50% 50vw);
+  /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
 }
 
 #circleAnimation3 {
   /* clip-path: circle(50vw at 50% 60vw); */
-  clip-path: ellipse(50vw 50vw at 50% 50vw);
+  /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
 }
 #circleAnimation4 {
   /* clip-path: circle(50vw at 50% 60vw); */
