@@ -45,13 +45,13 @@ body {
   background-position: center center;
   background-size: cover;
   display: flex;
-  height: 100vh;
+  height: 80vh;
   justify-content: space-around;
   position: relative;
 }
 
 .fullscreen-div--gradient {
-  background: linear-gradient(transparent 80%, #000 100%);
+  background: linear-gradient(transparent 50%, #fff 100%);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -334,6 +334,7 @@ body #cdawrap {
 }
 
 .section-tagline {
+  margin-top: 200px;
   padding-bottom: 200px;
   height: 100%;
   width: 75%;
@@ -341,7 +342,7 @@ body #cdawrap {
 }
 
 .text-container-section-1 {
-  padding-top: 300px;
+  padding-top: 500px;
   position: absolute;
   height: 100%;
   right: 20px;
@@ -538,18 +539,28 @@ body #cdawrap {
 }
 
 #circleAnimation1 {
-  clip-path: circle(10vw at 50% 0%);
+  /* clip-path: circle(50vw at 50% 50vw); */
+  clip-path: ellipse(80vw 50vw at 50% 50vw);
+  padding-top: 500px;
 }
 
+.scrolldown-container {
+  left: 50%;
+  position: absolute;
+  top: 5vh;
+  transform: translateX(-50%);
+}
 #circleAnimation2 {
-  clip-path: circle(10vw at 50% 0%);
+  /* clip-path: circle(50vw at 50% 60vw); */
+  clip-path: ellipse(80vw 50vw at 50% 60vw);
 }
 
 #circleAnimation3 {
-  clip-path: circle(10vw at 50% 0%);
+  /* clip-path: circle(50vw at 50% 60vw); */
+  clip-path: ellipse(80vw 50vw at 50% 60vw);
 }
 #circleAnimation4 {
-  clip-path: circle(10vw at 50% 0%);
+  /* clip-path: circle(50vw at 50% 60vw); */
 }
 
 .mobile-nav {
@@ -744,6 +755,10 @@ body #cdawrap {
     transform: translate(-50%, -50%);
     width: 90%;
     padding-top: 10%;
+  }
+
+  #circleAnimation1 .text-container {
+    padding-top: 200px;
   }
 
   .text-container .text-block {
