@@ -422,6 +422,7 @@ tl1.to("#circleAnimation1", { clipPath: "ellipse(150vw 150vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(300vw 300vw at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(800px 800px at 50% 50vw)" });
 tl1.to("#circleAnimation1", { clipPath: "ellipse(2000px 2000px at 50% 50vw)" });
+tl1.to("#circleAnimation1", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
 
 // tl1.to("#circleAnimation1", { clipPath: "circle(50vw at 50% 50vw)" });
 // tl1.to("#circleAnimation1", { clipPath: "circle(75vw at 50% 50vw)" });
@@ -458,6 +459,7 @@ tl2.to("#circleAnimation2", { clipPath: "ellipse(150vw 150vw at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(300vw 300vw at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(800px 800px at 50% 50vw)" });
 tl2.to("#circleAnimation2", { clipPath: "ellipse(2000px 2000px at 50% 50vw)" });
+tl2.to("#circleAnimation2", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
 
 
 var tl3 = gsap.timeline(
@@ -483,6 +485,7 @@ tl3.to("#circleAnimation3", { clipPath: "ellipse(150vw 150vw at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(300vw 300vw at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(800px 800px at 50% 50vw)" });
 tl3.to("#circleAnimation3", { clipPath: "ellipse(2000px 2000px at 50% 50vw)" });
+tl3.to("#circleAnimation3", { clipPath: "ellipse(10000px 10000px at 50% 50vw)" });
 
 
 // var tl4 = gsap.timeline(
