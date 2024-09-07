@@ -7,7 +7,7 @@
 :root {
   font-size: 16px;
   --color-text: #fff;
-  --color-bg: #fff;
+  --color-bg: #272324;
   --color-link: #fff;
   --color-link-hover: #907030;
   --color-title: #907030;
@@ -59,14 +59,14 @@ body {
 }
 
 .fullscreen-div--gradient {
-  background: linear-gradient(transparent 50%, #fff 100%);
+  background: linear-gradient(transparent 50%, #272324 100%);
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
 .circle-animation {
-  background-color: black;
+  background-color: #272324;
   padding-top: calc(25vh);
 }
 
@@ -419,10 +419,10 @@ body #cdawrap {
   margin: 5px;
 }
 
-#circleAnimation2 .first-subheader,
+/* #circleAnimation2 .first-subheader,
 #circleAnimation2 .first-header {
   color: black;
-}
+} */
 
 #circleAnimation4 .first-header {
   margin-bottom: 100px;
@@ -441,10 +441,10 @@ body #cdawrap {
   font-size: 40px;
 }
 
-.CTA-btn.CTA-btn-inverse {
+/* .CTA-btn.CTA-btn-inverse {
   color: black;
   border: 1px solid black;
-}
+} */
 
 .CTA-btn {
   position: absolute;
@@ -574,7 +574,7 @@ body #cdawrap {
 
 #circleAnimation1 {
   /* clip-path: circle(50vw at 50% 50vw); */
-  clip-path: ellipse(50vw 50vw at 50% 50vw);
+  /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
   padding-top: 500px;
 }
 
@@ -586,12 +586,12 @@ body #cdawrap {
 }
 #circleAnimation2 {
   /* clip-path: circle(50vw at 50% 60vw); */
-  clip-path: ellipse(50vw 50vw at 50% 50vw);
+  /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
 }
 
 #circleAnimation3 {
   /* clip-path: circle(50vw at 50% 60vw); */
-  clip-path: ellipse(50vw 50vw at 50% 50vw);
+  /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
 }
 #circleAnimation4 {
   /* clip-path: circle(50vw at 50% 60vw); */
@@ -606,7 +606,7 @@ body #cdawrap {
   top: 0;
   padding: 20px;
   right: -80%;
-  z-index: 99999999;
+  z-index: 99;
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -636,7 +636,7 @@ body #cdawrap {
   padding: 50px 40px 20px 40px;
   right: 0;
   top: 0;
-  z-index: 9999999;
+  z-index: 99;
   background-color: rgba(0, 0, 0, 0.2);
   transition: padding-top 0.5s ease-in;
 }
@@ -811,4 +811,29 @@ body #cdawrap {
   .contact-btn {
     font-size: 1rem;
   }
+}
+
+.loading-section {
+  transition: all 0.2s;
+  transition-delay: 1s;
+  opacity: 0;
+  pointer-events: none;
+
+  align-items: center;
+  background: #272324;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top:0;
+  z-index: 999;
+  padding-bottom: 150px;
+}
+
+.loading .loading-section {
+  opacity: 1;
+  pointer-events: initial;
 }
