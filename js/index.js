@@ -535,6 +535,7 @@ const scroll = () => {
 preloadImages(".grid__item-inner").then(() => {
   initSmoothScrolling();
   scroll();
+  setTimeout(() => window.scrollTo(0, 0), 300);
   document.body.classList.remove("loading");
 });
 

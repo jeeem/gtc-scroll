@@ -595,7 +595,7 @@ body #cdawrap {
   top: 0;
   padding: 20px;
   right: -80%;
-  z-index: 99999999;
+  z-index: 99;
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -625,7 +625,7 @@ body #cdawrap {
   padding: 50px 40px 20px 40px;
   right: 0;
   top: 0;
-  z-index: 9999999;
+  z-index: 99;
   background-color: rgba(0, 0, 0, 0.2);
   transition: padding-top 0.5s ease-in;
 }
@@ -804,4 +804,29 @@ body #cdawrap {
   .contact-btn {
     font-size: 1rem;
   }
+}
+
+.loading-section {
+  transition: all 0.2s;
+  transition-delay: 1s;
+  opacity: 0;
+  pointer-events: none;
+
+  align-items: center;
+  background: #272324;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top:0;
+  z-index: 999;
+  padding-bottom: 150px;
+}
+
+.loading .loading-section {
+  opacity: 1;
+  pointer-events: initial;
 }
