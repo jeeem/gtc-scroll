@@ -39,6 +39,14 @@ body {
   display: none !important;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
 .fullscreen-div {
   align-items: center;
   background-image: url("../img/landing-image.jpg");
@@ -339,10 +347,11 @@ body #cdawrap {
   height: 100%;
   width: 75%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .text-container-section-1 {
-  padding-top: 500px;
+  padding-top: 10%;
   position: absolute;
   height: 100%;
   right: 20px;
@@ -382,6 +391,10 @@ body #cdawrap {
   justify-content: space-between;
 }
 
+.gallery-section--gallery-content {
+  position: relative;
+}
+
 .gallery-section--gallery3 {
   position: relative;
 }
@@ -417,7 +430,6 @@ body #cdawrap {
 
 .first-subheader {
   color: white;
-  text-align: center;
   font-weight: 500;
   font-size: 35px;
 }
@@ -425,7 +437,6 @@ body #cdawrap {
 .first-header {
   color: white;
   margin-bottom: 200px;
-  text-align: center;
   font-weight: 300;
   font-size: 40px;
 }
@@ -782,10 +793,6 @@ body #cdawrap {
 
   .text-container-section-3 .text-section-content {
     font-size: 1.5rem !important;
-  }
-
-  #circleAnimation1 .text-container {
-    padding-top: 200px;
   }
 
   .text-container .text-block {
