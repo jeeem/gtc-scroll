@@ -590,7 +590,6 @@ function resizegallerySections() {
     const textContainerHeight =
       textContainerHtmls[i].getBoundingClientRect().height;
     section.style.minHeight = `${textContainerHeight * 1.25}px`;
-    console.log(section.style.minHeight);
   });
 }
 
@@ -628,15 +627,10 @@ const venueTextTL = gsap.timeline({
   },
 });
 
-const loadVenueScrollAnimation = () => {
-  venueText.forEach((textBox) => {
-    venueTextTL.from(textBox, { opacity: 0, x: -20 });
-    venueTextTL.to(textBox, { opacity: 1, x: 20 });
-    venueTextTL.to(textBox, { opacity: 0, x: -20, delay: 3 });
-  });
-};
-
-window.onload = loadVenueScrollAnimation();
+venueText.forEach((textBox) => {
+  venueTextTL.fromTo(textBox, { opacity: 0, x: -20 }, { opacity: 1, x: 20 });
+  venueTextTL.to(textBox, { opacity: 0, x: -20, delay: 3 });
+});
 
 // Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
 preloadImages(".grid__item-inner").then(() => {
