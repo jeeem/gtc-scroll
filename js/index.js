@@ -531,14 +531,6 @@ const scroll = () => {
   });
 };
 
-// Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-preloadImages(".grid__item-inner").then(() => {
-  initSmoothScrolling();
-  scroll();
-  setTimeout(() => window.scrollTo(0, 0), 300);
-  document.body.classList.remove("loading");
-});
-
 // Scroll to feature
 // Add class "scrollTo-[id]"
 const scrollToBtns = document.querySelectorAll("[class*='scrollTo-']");
@@ -598,7 +590,6 @@ function resizegallerySections() {
     const textContainerHeight =
       textContainerHtmls[i].getBoundingClientRect().height;
     section.style.minHeight = `${textContainerHeight * 1.25}px`;
-    console.log(section.style.minHeight);
   });
 }
 
@@ -637,7 +628,14 @@ const venueTextTL = gsap.timeline({
 });
 
 venueText.forEach((textBox) => {
-  venueTextTL.from(textBox, { opacity: 0, x: -20 });
-  venueTextTL.to(textBox, { opacity: 1, x: 20 });
+  venueTextTL.fromTo(textBox, { opacity: 0, x: -20 }, { opacity: 1, x: 20 });
   venueTextTL.to(textBox, { opacity: 0, x: -20, delay: 3 });
+});
+
+// Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
+preloadImages(".grid__item-inner").then(() => {
+  initSmoothScrolling();
+  scroll();
+  setTimeout(() => window.scrollTo(0, 0), 300);
+  document.body.classList.remove("loading");
 });
