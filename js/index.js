@@ -613,24 +613,26 @@ formBtn.addEventListener("click", (e) => {
   formSuccessMessage.classList.toggle("hide");
 });
 
-// Venues text Animation
-const venueText = gsap.utils.toArray(
-  ".text-container-section-3 .text-section-content"
-);
-const venueTextTL = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#circleAnimation3 .text-container-section-3 .text-block",
-    start: "-=300 +=200",
-    end: "bottom center",
-    scrub: 1,
-    // markers: true,
-  },
-});
+let foo = () => {
+  // Venues text Animation
+  const venueText = gsap.utils.toArray(
+    ".text-container-section-3 .text-section-content"
+  );
+  const venueTextTL = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#circleAnimation3 .text-container-section-3 .text-block",
+      start: "-=300 +=200",
+      end: "bottom center",
+      scrub: 1,
+      // markers: true,
+    },
+  });
 
-venueText.forEach((textBox) => {
-  venueTextTL.fromTo(textBox, { opacity: 0, x: -20 }, { opacity: 1, x: 20 });
-  venueTextTL.to(textBox, { opacity: 0, x: -20, delay: 3 });
-});
+  venueText.forEach((textBox) => {
+    venueTextTL.fromTo(textBox, { opacity: 0, x: -20 }, { opacity: 1, x: 20 });
+    venueTextTL.to(textBox, { opacity: 0, x: -20, delay: 3 });
+  });
+};
 
 // Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
 preloadImages(".grid__item-inner").then(() => {
@@ -638,4 +640,5 @@ preloadImages(".grid__item-inner").then(() => {
   scroll();
   setTimeout(() => window.scrollTo(0, 0), 300);
   document.body.classList.remove("loading");
+  setTimeout(foo, 1000);
 });
