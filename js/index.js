@@ -636,11 +636,12 @@ const loadVenueScrollAnimation = () => {
   });
 };
 
+window.onload = loadVenueScrollAnimation;
+
 // Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
 preloadImages(".grid__item-inner").then(() => {
   initSmoothScrolling();
   scroll();
-  loadVenueScrollAnimation();
   setTimeout(() => window.scrollTo(0, 0), 300);
   document.body.classList.remove("loading");
 });
