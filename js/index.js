@@ -162,7 +162,7 @@ const applyAnimation = (grid, animationType) => {
 
       break;
 
-    case "type3":
+    case "galleryBacktoForward":
       // Set some CSS related style values
       grid.style.setProperty("--grid-width", "105%");
       grid.style.setProperty("--grid-columns", "8");
@@ -206,7 +206,7 @@ const applyAnimation = (grid, animationType) => {
 
       break;
 
-    case "type4":
+    case "galleryScrollLeft":
       // Set some CSS related style values
       grid.style.setProperty("--grid-width", "50%");
       grid.style.setProperty("--perspective", "3000px");
@@ -338,7 +338,7 @@ const applyAnimation = (grid, animationType) => {
 
       break;
 
-    case "type7":
+    case "galleryScrollRight":
       // Set some CSS related style values
       grid.style.setProperty("--grid-width", "50%");
       grid.style.setProperty("--perspective", "3000px");
@@ -515,16 +515,16 @@ const scroll = () => {
     let animationType;
     switch (i % 6) {
       case 0:
-        animationType = "type4";
+        animationType = "galleryScrollLeft";
         break;
       case 1:
-        animationType = "type7";
+        animationType = "galleryBacktoForward";
         break;
       case 2:
-        animationType = "type7";
+        animationType = "galleryScrollRight";
         break;
       default:
-        animationType = "type4";
+        animationType = "galleryScrollLeft";
         break;
     }
     applyAnimation(grid, animationType);
@@ -613,7 +613,7 @@ formBtn.addEventListener("click", (e) => {
   formSuccessMessage.classList.toggle("hide");
 });
 
-let foo = () => {
+let venueTextAnimation = () => {
   // Venues text Animation
   const venueText = gsap.utils.toArray(
     ".text-container-section-3 .text-section-content"
@@ -640,5 +640,5 @@ preloadImages(".grid__item-inner").then(() => {
   scroll();
   setTimeout(() => window.scrollTo(0, 0), 300);
   document.body.classList.remove("loading");
-  setTimeout(foo, 1000);
+  setTimeout(venueTextAnimation, 1000);
 });
