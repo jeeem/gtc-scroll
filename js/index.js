@@ -312,7 +312,7 @@ const applyAnimation = (grid, animationType) => {
         );
       break;
 
-    case "type6":
+    case "scrollUpTwirl":
       // Set some CSS related style values
       grid.style.setProperty("--perspective", "2500px");
       grid.style.setProperty("--grid-width", "100%");
@@ -518,7 +518,7 @@ const scroll = () => {
         animationType = "galleryScrollLeft";
         break;
       case 1:
-        animationType = "galleryBacktoForward";
+        animationType = "scrollUpTwirl";
         break;
       case 2:
         animationType = "galleryBacktoForward";
@@ -527,7 +527,7 @@ const scroll = () => {
         animationType = "galleryScrollRight";
         break;
       case 4:
-        animationType = "galleryBacktoForward";
+        animationType = "scrollUpTwirl";
         break;
       default:
         animationType = "galleryScrollLeft";
