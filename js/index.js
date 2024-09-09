@@ -593,7 +593,6 @@ function resizegallerySections() {
   });
 }
 
-if (isMobileScreen) window.onload = resizegallerySections();
 window.addEventListener("resize", function () {
   if (isMobileScreen) resizegallerySections();
 });
@@ -641,4 +640,7 @@ preloadImages(".grid__item-inner").then(() => {
   setTimeout(() => window.scrollTo(0, 0), 300);
   document.body.classList.remove("loading");
   setTimeout(venueTextAnimation, 1000);
+  setTimeout(() => {
+    resizegallerySections();
+  }, 1000)
 });
