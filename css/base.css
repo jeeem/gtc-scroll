@@ -452,7 +452,7 @@ body #cdawrap {
   transform: translateX(-50%);
   left: 50%;
   padding: 20px 25px;
-  background: transparent;
+  background: #272324;
   border-radius: 35px;
   color: white;
   border: 1px solid white;
@@ -846,7 +846,7 @@ body #cdawrap {
   left: 0;
   position: fixed;
   right: 0;
-  top:0;
+  top: 0;
   z-index: 999;
   padding-bottom: 150px;
 }
@@ -867,7 +867,13 @@ body #cdawrap {
 .loader {
   width: 100px;
   height: 40px;
-  --g: radial-gradient(farthest-side,#0000 calc(95% - 15px),#fff calc(100% - 15px) 98%,#0000 101%) no-repeat;
+  --g: radial-gradient(
+      farthest-side,
+      #0000 calc(95% - 15px),
+      #fff calc(100% - 15px) 98%,
+      #0000 101%
+    )
+    no-repeat;
   background: var(--g), var(--g), var(--g);
   background-size: 30px 30px;
   animation: l9 1s infinite alternate;
