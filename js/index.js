@@ -521,7 +521,13 @@ const scroll = () => {
         animationType = "galleryBacktoForward";
         break;
       case 2:
+        animationType = "galleryBacktoForward";
+        break;
+      case 3:
         animationType = "galleryScrollRight";
+        break;
+      case 4:
+        animationType = "galleryBacktoForward";
         break;
       default:
         animationType = "galleryScrollLeft";
@@ -587,6 +593,7 @@ const isMobileScreen = window.screen.width < "900px";
 
 function resizegallerySections() {
   gallerySectionHtmls.forEach((section, i) => {
+    if (i !== 0) return;
     const textContainerHeight =
       textContainerHtmls[i].getBoundingClientRect().height;
     section.style.minHeight = `${textContainerHeight * 1.25}px`;

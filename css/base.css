@@ -776,7 +776,23 @@ body #cdawrap {
   }
 }
 
+.isDesktopGrid {
+  display: grid;
+}
+
+.isMobileGrid {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
+  .isDesktopGrid {
+    display: none;
+  }
+  
+  .isMobileGrid {
+    display: grid;
+  }
+
   .mobile-hamburger {
     display: block;
   }
