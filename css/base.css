@@ -881,3 +881,7 @@ body.loading {
   max-height: 100vh;
   overflow: hidden;
 }
+
+#circleAnimation2 .grid__item {
+  overflow: visible;
+}
