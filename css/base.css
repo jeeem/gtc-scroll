@@ -409,7 +409,6 @@ body #cdawrap {
 .text-container-section-3 .text-block {
   width: 100%;
   max-width: 460px;
-  margin: 0 auto;
 }
 
 .text-container-section-3 .text-block .text-section-content {
@@ -768,12 +767,13 @@ body #cdawrap {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1300px) {
   .section-tagline {
     max-width: 800px;
   }
 
-  .text-container-section-1 {
+  .text-container-section-1,
+  .text-container-section-3 {
     max-width: 800px;
     left: 50%;
     right: 50%;
