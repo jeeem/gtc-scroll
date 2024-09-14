@@ -639,7 +639,7 @@ body #cdawrap {
   right: 0;
   top: 0;
   z-index: 99;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: transparent;
   transition: padding-top 0.5s ease-in;
 }
 
@@ -647,7 +647,7 @@ body #cdawrap {
   width: 33%;
 }
 .nav-top-left img {
-  max-width: 160px;
+  max-width: 130px;
 }
 
 .mobile-hamburger {
@@ -712,6 +712,8 @@ body #cdawrap {
   justify-content: space-between;
 }
 .nav-top-center {
+  font-size: 1.2rem;
+  gap: 10px;
   display: flex;
   margin: 0 auto;
 }
@@ -788,7 +790,7 @@ body #cdawrap {
   .isDesktopGrid {
     display: none;
   }
-  
+
   .isMobileGrid {
     display: grid;
   }
