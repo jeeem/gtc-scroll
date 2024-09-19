@@ -402,8 +402,6 @@ const applyAnimation = (grid, animationType) => {
         i % 3 === 1 ? centerItems.push(item) : outerItems.push(item)
       );
 
-      console.log({ centerItems, outerItems });
-
       timeline
         .set(gridWrap, {
           transformStyle: "unset",
