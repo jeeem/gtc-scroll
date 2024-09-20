@@ -800,6 +800,10 @@ body #cdawrap {
 }
 
 @media screen and (max-width: 900px) {
+  .grid {
+    padding: 10px;
+  }
+
   .isDesktopGrid {
     display: none;
   }
@@ -816,12 +820,51 @@ body #cdawrap {
     display: none;
   }
 
-  .text-container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .section4-tagline {
+    padding-bottom: 50px;
+  }
+
+  .gallery-section--gallery-content {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .grid-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid-wrap .grid__item {
+    flex: 45%;
+  }
+
+  #circleAnimation1,
+  #circleAnimation2 {
+    padding-bottom: 300px;
+  }
+
+  .section-tagline {
     width: 90%;
-    padding-top: 10%;
+  }
+
+  .grid__item-inner3 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .text-container-section-3 {
+    height: 1000px;
   }
 
   .text-container-section-3 .text-section-content {
@@ -840,8 +883,11 @@ body #cdawrap {
     max-width: 90%;
   }
 
-  .CTA-btn,
-  .contact-btn {
+  .CTA-btn {
+    width: 80%;
+  }
+
+  .CTA-btn .contact-btn {
     font-size: 1rem;
   }
 }
