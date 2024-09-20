@@ -836,7 +836,7 @@ body #cdawrap {
   }
 
   .grid-wrap .grid__item {
-    flex: 50%;
+    flex: 45%;
   }
 
   #circleAnimation1,
@@ -846,6 +846,17 @@ body #cdawrap {
 
   .section-tagline {
     width: 90%;
+  }
+
+  .grid__item {
+    aspect-ratio: auto;
+  }
+
+  .grid__item-inner {
+    width: 100%;
+    max-height: 250px;
+    padding-top: 100%;
+    height: 100%;
   }
 
   .grid__item-inner3 {
