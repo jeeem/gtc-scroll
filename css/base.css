@@ -836,7 +836,7 @@ body #cdawrap {
   }
 
   .grid-wrap .grid__item {
-    flex: 45%;
+    flex: 50%;
   }
 
   #circleAnimation1,
