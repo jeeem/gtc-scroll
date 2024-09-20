@@ -1,5 +1,7 @@
 # On-Scroll 3D Grid Animations
 
+[Site Preview](https://jeeem.github.io/gtc-scroll/)
+
 On-scroll animations for perspective image grids with different layouts.
 
 ![On-Scroll 3D Grid Animations](https://tympanus.net/codrops/wp-content/uploads/2023/08/onscroll3dgrid.jpeg)
@@ -21,11 +23,7 @@ Run this demo on a [local server](https://developer.mozilla.org/en-US/docs/Learn
 Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
 
 ## License
+
 [MIT](LICENSE)
 
-Made with :blue_heart:  by [Codrops](http://www.codrops.com)
-
-
-
-
-
+Made with :blue_heart: by [Codrops](http://www.codrops.com)
