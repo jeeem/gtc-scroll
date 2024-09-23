@@ -39,10 +39,6 @@ body {
   display: none !important;
 }
 
-.text-align-right {
-  text-align: right;
-}
-
 .text-align-left {
   text-align: left;
 }
@@ -768,11 +764,21 @@ body #cdawrap {
 }
 
 @media screen and (min-width: 1300px) {
+  .desktop-text-align-right {
+    text-align: right;
+  }
+
   .section-tagline {
     max-width: 800px;
   }
 
-  .text-container-section-1,
+  .text-container-section-1 {
+    max-width: 630px;
+    left: 65%;
+    right: 50%;
+    transform: translate(-50%);
+  }
+
   .text-container-section-3 {
     max-width: 800px;
     left: 50%;
@@ -782,6 +788,10 @@ body #cdawrap {
 }
 
 @media screen and (max-width: 1300px) {
+  .desktop-text-align-right {
+    text-align: center;
+  }
+
   .text-block .first-subheader {
     font-size: 25px;
   }
