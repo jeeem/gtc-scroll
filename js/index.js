@@ -41,7 +41,7 @@ const initSmoothScrolling = () => {
 };
 
 // All elements with class .grid
-const grids = document.querySelectorAll(".grid.isDesktopGrid");
+const grids = document.querySelectorAll(".grid.isDesktop");
 
 // Function to apply scroll-triggered animations to a given gallery
 const applyAnimation = (grid, animationType) => {
@@ -445,10 +445,10 @@ const scroll = () => {
         break;
       case 2:
         // Venue Section
-        animationType = "galleryScrollRight";
+        animationType = "galleryCenterImageStaggerScroll";
         break;
       default:
-        animationType = "galleryScrollLeft";
+        animationType = "galleryCenterImageStaggerScroll";
         break;
     }
     applyAnimation(grid, animationType);
