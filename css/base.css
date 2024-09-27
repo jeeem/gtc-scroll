@@ -775,13 +775,6 @@ body #cdawrap {
     right: 50%;
     transform: translate(-50%);
   }
-
-  .text-container-section-3 {
-    max-width: 800px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%);
-  }
 }
 
 @media screen and (max-width: 1300px) {
