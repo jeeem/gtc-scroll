@@ -42,6 +42,46 @@ const initSmoothScrolling = () => {
 
 // All elements with class .grid
 const grids = document.querySelectorAll(".grid.isDesktop");
+const masonryWraps = document.querySelectorAll(".masonry-wrapper-desktop");
+
+// Function to apply scroll-triggered animations to a given gallery Masonry
+const applyAnimationMasonry = (masonry) => {
+  console.log({ masonry });
+  const masonryItems = masonry.querySelectorAll(".masonry-item");
+  const timeline = gsap.timeline({
+    defaults: { ease: "none" },
+    scrollTrigger: {
+      trigger: masonry,
+      start: "top bottom+=5%",
+      end: "bottom top-=5%",
+      scrub: true,
+    },
+  });
+
+  const centerItems = [];
+  const outerItems = [];
+  masonryItems.forEach((item, i) =>
+    i % 3 === 1 ? centerItems.push(item) : outerItems.push(item)
+  );
+
+  timeline
+    .set(centerItems, {
+      y: "-=200",
+    })
+    // .set(outerItems, {
+    //   y: "+=200",
+    // })
+    .to(centerItems, {
+      y: "+=600",
+      ease: "power2",
+      z: 500,
+    });
+  // .to(outerItems, {
+  //   y: "-=200",
+  //   ease: "power2",
+  //   z: 500,
+  // });
+};
 
 // Function to apply scroll-triggered animations to a given gallery
 const applyAnimation = (grid, animationType) => {
@@ -391,6 +431,7 @@ const applyAnimation = (grid, animationType) => {
         );
 
       break;
+
     case "galleryCenterImageStaggerScroll":
       // Set some CSS related style values
       grid.style.setProperty("--grid-width", "100%");
@@ -445,6 +486,8 @@ const scroll = () => {
     }
     applyAnimation(grid, animationType);
   });
+
+  masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
 };
 
 // Scroll to feature
@@ -541,6 +584,7 @@ let masonryFn = () => {
     // use element for option
     // columnWidth: '.grid-sizer',
     percentPosition: true,
+    horizontalOrder: true,
     gutter: 10,
   });
   let msnry2 = new Masonry(elem2, {
@@ -557,6 +601,7 @@ let masonryFn = () => {
     // use element for option
     // columnWidth: '.grid-sizer',
     percentPosition: true,
+    horizontalOrder: true,
     gutter: 10,
   });
   let msnry4 = new Masonry(elem4, {
