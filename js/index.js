@@ -46,7 +46,6 @@ const masonryWraps = document.querySelectorAll(".masonry-wrapper-desktop");
 
 // Function to apply scroll-triggered animations to a given gallery Masonry
 const applyAnimationMasonry = (masonry) => {
-  console.log({ masonry });
   const masonryItems = masonry.querySelectorAll(".masonry-item");
   const timeline = gsap.timeline({
     defaults: { ease: "none" },
@@ -68,19 +67,19 @@ const applyAnimationMasonry = (masonry) => {
     .set(centerItems, {
       y: "-=200",
     })
-    // .set(outerItems, {
-    //   y: "+=200",
-    // })
+    .set(outerItems, {
+      y: "+=200",
+    })
     .to(centerItems, {
       y: "+=600",
       ease: "power2",
       z: 500,
+    })
+    .to(outerItems, {
+      y: "-=600",
+      ease: "power2",
+      z: 500,
     });
-  // .to(outerItems, {
-  //   y: "-=200",
-  //   ease: "power2",
-  //   z: 500,
-  // });
 };
 
 // Function to apply scroll-triggered animations to a given gallery
