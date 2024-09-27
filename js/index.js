@@ -71,12 +71,12 @@ const applyAnimationMasonry = (masonry) => {
       y: "+=200",
     })
     .to(centerItems, {
-      y: "+=600",
+      y: "+=400",
       ease: "power2",
       z: 500,
     })
     .to(outerItems, {
-      y: "-=600",
+      y: "-=200",
       ease: "power2",
       z: 500,
     });
