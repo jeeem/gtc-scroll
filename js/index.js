@@ -559,43 +559,43 @@ let venueTextAnimation = () => {
 };
 
 let masonryFn = () => {
-  var elem = document.querySelector('#masonrydesktop1');
-  var elem2 = document.querySelector('#masonrymobile1');
-  var elem3 = document.querySelector('#masonrydesktop2');
-  var elem4 = document.querySelector('#masonrymobile2');
-  var msnry1 = new Masonry( elem, {
+  let elem = document.querySelector("#masonrydesktop1");
+  let elem2 = document.querySelector("#masonrymobile1");
+  let elem3 = document.querySelector("#masonrydesktop2");
+  let elem4 = document.querySelector("#masonrymobile2");
+  let msnry1 = new Masonry(elem, {
     // options
-    itemSelector: '.masonry-item',
-      // use element for option
-      // columnWidth: '.grid-sizer',
+    itemSelector: ".masonry-item",
+    // use element for option
+    // columnWidth: '.grid-sizer',
     percentPosition: true,
-    gutter: 10
+    gutter: 10,
   });
-  var msnry2 = new Masonry( elem2, {
+  let msnry2 = new Masonry(elem2, {
     // options
-    itemSelector: '.masonry-item',
-      // use element for option
-      // columnWidth: '.grid-sizer',
+    itemSelector: ".masonry-item",
+    // use element for option
+    // columnWidth: '.grid-sizer',
     percentPosition: true,
-    gutter: 10
+    gutter: 10,
   });
-  var msnry3 = new Masonry( elem3, {
+  let msnry3 = new Masonry(elem3, {
     // options
-    itemSelector: '.masonry-item',
-      // use element for option
-      // columnWidth: '.grid-sizer',
+    itemSelector: ".masonry-item",
+    // use element for option
+    // columnWidth: '.grid-sizer',
     percentPosition: true,
-    gutter: 10
+    gutter: 10,
   });
-  var msnry4 = new Masonry( elem4, {
+  let msnry4 = new Masonry(elem4, {
     // options
-    itemSelector: '.masonry-item',
-      // use element for option
-      // columnWidth: '.grid-sizer',
+    itemSelector: ".masonry-item",
+    // use element for option
+    // columnWidth: '.grid-sizer',
     percentPosition: true,
-    gutter: 10
+    gutter: 10,
   });
-}
+};
 
 // Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
 preloadImages(".grid__item-inner").then(() => {

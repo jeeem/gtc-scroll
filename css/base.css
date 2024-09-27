@@ -94,6 +94,43 @@ body {
   animation: loaderAnim 0.7s linear infinite alternate forwards;
 }
 
+/* Masonry Styles */
+.masonry-container {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.masonry-wrapper-desktop {
+  width: 100%;
+}
+.masonry-wrapper-mobile {
+  width: 100%;
+}
+.masonry-item {
+  margin-bottom: 10px;
+  width: calc(33.3vw - 20px);
+}
+
+.masonry-wrapper-desktop {
+  display: block;
+}
+.masonry-wrapper-mobile {
+  display: none;
+}
+
+.masonry-wrapper-mobile .masonry-item {
+  width: calc(49vw - 20px);
+}
+
+@media screen and (max-width: 900px) {
+  .masonry-wrapper-desktop {
+    display: none;
+  }
+  .masonry-wrapper-mobile {
+    display: block;
+  }
+}
+
 @keyframes loaderAnim {
   to {
     opacity: 1;
