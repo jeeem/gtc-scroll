@@ -439,14 +439,6 @@ const scroll = () => {
         // Tour section
         animationType = "galleryScrollLeft";
         break;
-      case 1:
-        // Promotions Section
-        animationType = "galleryCenterImageStaggerScroll";
-        break;
-      case 2:
-        // Venue Section
-        animationType = "galleryCenterImageStaggerScroll";
-        break;
       default:
         animationType = "galleryCenterImageStaggerScroll";
         break;
@@ -537,27 +529,7 @@ formBtn.addEventListener("click", (e) => {
   formSuccessMessage.classList.toggle("hide");
 });
 
-let venueTextAnimation = () => {
-  // Venues text Animation
-  const venueText = gsap.utils.toArray(
-    ".text-container-section-3 .text-section-content"
-  );
-  const venueTextTL = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#circleAnimation3 .text-container-section-3 .text-block",
-      start: "-=300 +=200",
-      end: "bottom center",
-      scrub: 1,
-      // markers: true,
-    },
-  });
-
-  venueText.forEach((textBox) => {
-    venueTextTL.fromTo(textBox, { opacity: 0, x: -20 }, { opacity: 1, x: 20 });
-    venueTextTL.to(textBox, { opacity: 0, x: -20, delay: 3 });
-  });
-};
-
+// Masonry Functionality
 let masonryFn = () => {
   let elem = document.querySelector("#masonrydesktop1");
   let elem2 = document.querySelector("#masonrymobile1");
@@ -603,7 +575,6 @@ preloadImages(".grid__item-inner").then(() => {
   scroll();
   setTimeout(() => window.scrollTo(0, 0), 300);
   document.body.classList.remove("loading");
-  setTimeout(venueTextAnimation, 1000);
   setTimeout(() => {
     resizegallerySections();
   }, 1000);
