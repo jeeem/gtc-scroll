@@ -492,10 +492,94 @@
               </h3>
             </div>
           </div>
+          <style>
+            .masonry-wrapper-desktop {
+              width: 100%;
+            }
+            .masonry-wrapper-mobile {
+              width: 100%;
+            }
+            .masonry-item {
+              margin-bottom: 10px;
+              width: calc(33.3vw - 10px);
+            }
 
-          <div class="gallery-section--gallery2">
+            .masonry-wrapper-desktop {
+              display: block;
+            }
+            .masonry-wrapper-mobile {
+              display: none;
+            }
+
+            .masonry-wrapper-mobile .masonry-item {
+              width: calc(50vw - 10px);
+            }
+            @media screen and (max-width: 900px) {
+              .masonry-wrapper-desktop {
+                display: none;
+              }
+              .masonry-wrapper-mobile {
+                display: block;
+              }
+            }
+          </style>
+
+          <div id="masonrydesktop1" class="masonry-wrapper-desktop">
+
+                <img class="masonry-item" src="img/promoters3/1.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/2.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/3.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/4.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/5.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/6.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/7.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/8.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/9.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/10.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/11.jpg" />
+
+                <img class="masonry-item" src="img/promoters3/12.jpg" />
+          </div>
+
+          <div id="masonrymobile1" class="masonry-wrapper-mobile">
+
+            <img class="masonry-item" src="img/promoters3/1.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/2.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/3.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/4.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/5.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/6.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/7.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/8.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/9.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/10.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/11.jpg" />
+
+            <img class="masonry-item" src="img/promoters3/12.jpg" />
+      </div>
+
+          <!-- <div class="gallery-section--gallery2">
             <div class="grid grid--5 isDesktop">
-              <!-- Best in rows of 3 -->
               <div class="grid-wrap">
                 <div class="grid__item">
                   <div
@@ -573,7 +657,6 @@
             </div>
 
             <div class="grid grid--5 isMobile">
-              <!-- Best in rows of 3 -->
               <div class="grid-wrap">
                 <div class="grid__item">
                   <div
@@ -649,7 +732,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="cta-container">
             <button class="CTA-btn CTA-btn-inverse scrollTo-circleAnimation4">
               TALK TO US TODAY ABOUT HANDLING YOUR IN-HOUSE CREATIVE NEEDS
@@ -681,87 +764,37 @@
           </div>
         </div>
 
-        <div class="gallery-section--gallery3">
-          <div class="grid grid--5 isDesktop">
-            <!-- Best in rows of 3 -->
-            <div class="grid-wrap">
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/1.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/2.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/3.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/4.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/5.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/6.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/7.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/8.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/9.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/10.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/11.jpg)"
-                ></div>
-              </div>
-              <div class="grid__item">
-                <div
-                  class="grid__item-inner grid__item-inner3"
-                  style="background-image: url(img/venue3/12.jpg)"
-                ></div>
-              </div>
-            </div>
-          </div>
+        <div id="masonrydesktop2" class="masonry-wrapper-desktop">
+          <img class="masonry-item" src="img/venue3/1.jpg" />
+          <img class="masonry-item" src="img/venue3/2.jpg" />
+          <img class="masonry-item" src="img/venue3/3.jpg" />
+          <img class="masonry-item" src="img/venue3/4.jpg" />
+          <img class="masonry-item" src="img/venue3/5.jpg" />
+          <img class="masonry-item" src="img/venue3/6.jpg" />
+          <img class="masonry-item" src="img/venue3/7.jpg" />
+          <img class="masonry-item" src="img/venue3/8.jpg" />
+          <img class="masonry-item" src="img/venue3/9.jpg" />
+          <img class="masonry-item" src="img/venue3/10.jpg" />
+          <img class="masonry-item" src="img/venue3/11.jpg" />
+          <img class="masonry-item" src="img/venue3/12.jpg" />
+      </div>
+      <div id="masonrymobile2" class="masonry-wrapper-mobile">
+        <img class="masonry-item" src="img/venue3/1.jpg" />
+        <img class="masonry-item" src="img/venue3/2.jpg" />
+        <img class="masonry-item" src="img/venue3/3.jpg" />
+        <img class="masonry-item" src="img/venue3/4.jpg" />
+        <img class="masonry-item" src="img/venue3/5.jpg" />
+        <img class="masonry-item" src="img/venue3/6.jpg" />
+        <img class="masonry-item" src="img/venue3/7.jpg" />
+        <img class="masonry-item" src="img/venue3/8.jpg" />
+        <img class="masonry-item" src="img/venue3/9.jpg" />
+        <img class="masonry-item" src="img/venue3/10.jpg" />
+        <img class="masonry-item" src="img/venue3/11.jpg" />
+        <img class="masonry-item" src="img/venue3/12.jpg" />
+    </div>
 
+    <!--
           <div class="grid grid--5 isMobile">
-            <!-- Best in rows of 3 -->
             <div class="grid-wrap">
               <div class="grid__item">
                 <div
@@ -837,6 +870,7 @@
               </div>
             </div>
           </div>
+        -->
 
           <div class="text-container text-container-section-3">
             <div class="text-block">
@@ -891,6 +925,7 @@
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/lenis.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
     <script type="module" src="js/index.js"></script>
   </body>
 </html>
