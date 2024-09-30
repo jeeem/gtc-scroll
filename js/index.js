@@ -42,7 +42,9 @@ const initSmoothScrolling = () => {
 
 // All elements with class .grid
 const grids = document.querySelectorAll(".grid.isDesktop");
-const masonryWraps = document.querySelectorAll(".masonry-wrapper-desktop");
+const masonryWraps = document.querySelectorAll(
+  ".masonry-wrapper-desktop.withScrollAnimation"
+);
 
 // Function to apply scroll-triggered animations to a given gallery Masonry
 const applyAnimationMasonry = (masonry) => {
@@ -471,20 +473,20 @@ const applyAnimation = (grid, animationType) => {
 
 // Apply animations to each grid
 const scroll = () => {
-  grids.forEach((grid, i) => {
-    // Determine animation type
-    let animationType;
-    switch (i % 6) {
-      case 0:
-        // Tour section
-        animationType = "galleryScrollLeft";
-        break;
-      default:
-        animationType = "galleryCenterImageStaggerScroll";
-        break;
-    }
-    applyAnimation(grid, animationType);
-  });
+  // grids.forEach((grid, i) => {
+  //   // Determine animation type
+  //   let animationType;
+  //   switch (i % 6) {
+  //     case 0:
+  //       // Tour section
+  //       animationType = "galleryScrollLeft";
+  //       break;
+  //     default:
+  //       animationType = "galleryCenterImageStaggerScroll";
+  //       break;
+  //   }
+  //   applyAnimation(grid, animationType);
+  // });
 
   masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
 };
@@ -573,43 +575,19 @@ formBtn.addEventListener("click", (e) => {
 
 // Masonry Functionality
 let masonryFn = () => {
-  let elem = document.querySelector("#masonrydesktop1");
-  let elem2 = document.querySelector("#masonrymobile1");
-  let elem3 = document.querySelector("#masonrydesktop2");
-  let elem4 = document.querySelector("#masonrymobile2");
-  let msnry1 = new Masonry(elem, {
-    // options
-    itemSelector: ".masonry-item",
-    // use element for option
-    // columnWidth: '.grid-sizer',
-    percentPosition: true,
-    horizontalOrder: true,
-    gutter: 10,
-  });
-  let msnry2 = new Masonry(elem2, {
-    // options
-    itemSelector: ".masonry-item",
-    // use element for option
-    // columnWidth: '.grid-sizer',
-    percentPosition: true,
-    gutter: 10,
-  });
-  let msnry3 = new Masonry(elem3, {
-    // options
-    itemSelector: ".masonry-item",
-    // use element for option
-    // columnWidth: '.grid-sizer',
-    percentPosition: true,
-    horizontalOrder: true,
-    gutter: 10,
-  });
-  let msnry4 = new Masonry(elem4, {
-    // options
-    itemSelector: ".masonry-item",
-    // use element for option
-    // columnWidth: '.grid-sizer',
-    percentPosition: true,
-    gutter: 10,
+  let elems = document.querySelectorAll(
+    ".masonry-container [class*='masonry-wrapper']"
+  );
+
+  console.log({ elems });
+
+  elems.forEach((elem) => {
+    return new Masonry(elem, {
+      itemSelector: ".masonry-item",
+      percentPosition: true,
+      horizontalOrder: true,
+      gutter: 10,
+    });
   });
 };
 
