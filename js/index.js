@@ -577,7 +577,7 @@ let masonryFn = () => {
 };
 
 // Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-preloadImages(".grid__item-inner").then(() => {
+preloadImages("img.masonry-item").then(() => {
   initSmoothScrolling();
   setTimeout(() => window.scrollTo(0, 0), 300);
   masonryFn();
