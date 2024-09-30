@@ -1020,3 +1020,7 @@ body #cdawrap {
 #circleAnimation2 .grid__item {
   overflow: visible;
 }
+
+.section4-tagline {
+  padding-bottom: 0;
+}
