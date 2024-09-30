@@ -35,6 +35,79 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.loading-section {
+  transition: all 0.2s;
+  transition-delay: 1s;
+  opacity: 0;
+  pointer-events: none;
+
+  align-items: center;
+  background: #272324;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  padding-bottom: 150px;
+}
+
+.loading .loading-section {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.loader {
+  position: absolute;
+  bottom: calc(150px - 5vh);
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 100px;
+  height: 40px;
+  --g: radial-gradient(
+      farthest-side,
+      #0000 calc(95% - 15px),
+      #fff calc(100% - 15px) 98%,
+      #0000 101%
+    )
+    no-repeat;
+  background: var(--g), var(--g), var(--g);
+  background-size: 30px 30px;
+  animation: l9 1s infinite alternate;
+}
+@keyframes l9 {
+  0% {
+    background-position: 0 50%, 50% 50%, 100% 50%;
+  }
+  20% {
+    background-position: 0 0, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0 100%, 50% 0, 100% 50%;
+  }
+  60% {
+    background-position: 0 50%, 50% 100%, 100% 0;
+  }
+  80% {
+    background-position: 0 50%, 50% 50%, 100% 100%;
+  }
+  100% {
+    background-position: 0 50%, 50% 50%, 100% 50%;
+  }
+}
+
+body.loading {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .hide {
   display: none !important;
 }
@@ -189,10 +262,6 @@ a:not(.card__image):focus-visible {
 
 button:hover {
   cursor: pointer;
-}
-
-main.with-sticky {
-  margin-top: -117px;
 }
 
 main {
@@ -377,27 +446,24 @@ body #cdawrap {
 }
 
 .section-tagline {
-  margin-top: 200px;
   padding-bottom: 200px;
   height: 100%;
   width: 50%;
   margin: 0 auto;
   text-align: center;
 }
+.section-tagline .first-subheader {
+  color: white;
+  font-weight: 800;
+  font-size: 3.25rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
 
-/* .text-container-section-1 {
-  padding-top: 10%;
-  position: absolute;
-  height: 100%;
-  right: 20px;
-  top: 0;
-  width: 50%;
+.section-tagline .first-header {
+  margin-top: 10px;
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 300px;
-} */
 .text-container-section-1 {
   text-align: center;
   max-width: 65%;
@@ -682,6 +748,7 @@ body #cdawrap {
 .nav-top-left {
   width: 33%;
 }
+
 .nav-top-left img {
   max-width: 130px;
 }
@@ -809,10 +876,6 @@ body #cdawrap {
     text-align: right;
   }
 
-  .section-tagline {
-    max-width: 800px;
-  }
-
   /* .text-container-section-1 {
     max-width: 630px;
     left: 65%;
@@ -826,9 +889,6 @@ body #cdawrap {
     text-align: center;
   }
 
-  .text-block .first-subheader {
-    font-size: 25px;
-  }
   .text-block .first-header {
     font-size: 30px;
     margin-bottom: 50px;
@@ -857,7 +917,8 @@ body #cdawrap {
   }
 
   .mobile-hamburger {
-    display: block;
+    display: flex;
+    justify-content: end;
   }
 
   .desktop-nav {
@@ -868,7 +929,7 @@ body #cdawrap {
     padding-bottom: 50px;
   }
 
-  .section2-tagline {
+  .section-tagline {
     padding-bottom: 20px;
   }
 
@@ -948,79 +1009,6 @@ body #cdawrap {
   .CTA-btn .contact-btn {
     font-size: 1rem;
   }
-}
-
-.loading-section {
-  transition: all 0.2s;
-  transition-delay: 1s;
-  opacity: 0;
-  pointer-events: none;
-
-  align-items: center;
-  background: #272324;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 999;
-  padding-bottom: 150px;
-}
-
-.loading .loading-section {
-  opacity: 1;
-  pointer-events: initial;
-}
-
-.loader {
-  position: absolute;
-  bottom: calc(150px - 5vh);
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-}
-
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 100px;
-  height: 40px;
-  --g: radial-gradient(
-      farthest-side,
-      #0000 calc(95% - 15px),
-      #fff calc(100% - 15px) 98%,
-      #0000 101%
-    )
-    no-repeat;
-  background: var(--g), var(--g), var(--g);
-  background-size: 30px 30px;
-  animation: l9 1s infinite alternate;
-}
-@keyframes l9 {
-  0% {
-    background-position: 0 50%, 50% 50%, 100% 50%;
-  }
-  20% {
-    background-position: 0 0, 50% 50%, 100% 50%;
-  }
-  40% {
-    background-position: 0 100%, 50% 0, 100% 50%;
-  }
-  60% {
-    background-position: 0 50%, 50% 100%, 100% 0;
-  }
-  80% {
-    background-position: 0 50%, 50% 50%, 100% 100%;
-  }
-  100% {
-    background-position: 0 50%, 50% 50%, 100% 50%;
-  }
-}
-
-body.loading {
-  max-height: 100vh;
-  overflow: hidden;
 }
 
 #circleAnimation2 .grid__item {
