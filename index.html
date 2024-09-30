@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.png" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
   </head>
   <body class="loading">
@@ -712,9 +712,10 @@
 
         <div class="contactForm--form-message">
           <form>
-            <input type="email" placeholder="Contact Email" />
-            <textarea placeholder="What's the message?"></textarea>
-            <button class="contact-btn">Submit</button>
+            <input id="nameForm" type="email" placeholder="Full Name" />
+            <input id="emailForm" type="email" placeholder="Contact Email" />
+            <textarea id="bodyForm" placeholder="What's the message?"></textarea>
+            <button id="submitButton" disabled class="contact-btn">Submit</button>
           </form>
 
           <p class="form-success hide">
