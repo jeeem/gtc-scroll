@@ -601,6 +601,12 @@ body #cdawrap {
   max-width: 200px;
   width: 100%;
   margin: 0 auto;
+  opacity: 1;
+}
+
+.contactForm--form-message form button.contact-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 /* .form-success {
@@ -1013,4 +1019,8 @@ body #cdawrap {
 
 #circleAnimation2 .grid__item {
   overflow: visible;
+}
+
+.section4-tagline {
+  padding-bottom: 0;
 }

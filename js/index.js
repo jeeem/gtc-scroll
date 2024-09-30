@@ -584,3 +584,55 @@ preloadImages("img.masonry-item").then(() => {
   scroll();
   document.body.classList.remove("loading");
 });
+
+const nameForm = document.querySelector('#nameForm');
+const emailForm = document.querySelector('#emailForm');
+const bodyForm = document.querySelector('#bodyForm');
+const formSubmit = document.querySelector('#submitButton');
+
+const formChanged = () => {
+  const emailContent = emailForm.value;
+  const bodyContent = bodyForm.value;
+
+  if (emailContent.length) {
+    formSubmit.disabled = false;
+  } else {
+    formSubmit.disabled = true
+  }
+}
+
+const contactFormCallback = (e) => {
+  const emailContent = emailForm.value;
+  const bodyContent = bodyForm.value;
+
+  const jsonObject = { name: nameForm.value ? nameForm.value : emailContent, email: emailContent, message : bodyContent };
+
+  fetch('https://www.globaltourcreatives.com/api/?get=contactForm', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(jsonObject)
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error('Error:', error);
+  });
+}
+
+formSubmit.addEventListener("click", (event) => {
+  contactFormCallback();
+});
+
+emailForm.addEventListener("change", () => {
+  formChanged();
+})
+
+bodyForm.addEventListener("change", () => {
+  formChanged();
+})
