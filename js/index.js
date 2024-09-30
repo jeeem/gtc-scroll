@@ -1,12 +1,18 @@
 // Import the necessary function for preloading images
 import { preloadImages, getGrid } from "./utils.js";
 
+// let isMobileScreen = window.innerWidth < 900;
+// window.addEventListener("resize", () => {
+//   isMobileScreen = window.innerWidth < 900;
+// });
+
 // Define a variable that will store the Lenis smooth scrolling object
 let lenis;
 
 // Sticky Nav
-const firtSectionHTMLOffsetTop =
-  document.querySelector("#circleAnimation1").offsetTop;
+const firtSectionHTMLOffsetTop = document.querySelector(
+  "#tourBrandingSection"
+).offsetTop;
 const mainHTML = document.querySelector("main");
 const navHTML = document.querySelector(".nav-outer");
 
@@ -487,7 +493,6 @@ const scroll = () => {
   //   }
   //   applyAnimation(grid, animationType);
   // });
-
   masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
 };
 
@@ -540,24 +545,6 @@ hamburgerIconHTML.addEventListener("click", () => {
   mobileNavHTML.classList.add("active");
 });
 
-// Resize galery text content to fit in mobile
-const textContainerHtmls = document.querySelectorAll(".text-container");
-const gallerySectionHtmls = document.querySelectorAll(".gallery-section");
-const isMobileScreen = window.screen.width < "900px";
-
-function resizegallerySections() {
-  gallerySectionHtmls.forEach((section, i) => {
-    if (i !== 0) return;
-    const textContainerHeight =
-      textContainerHtmls[i].getBoundingClientRect().height;
-    section.style.minHeight = `${textContainerHeight * 1.25}px`;
-  });
-}
-
-window.addEventListener("resize", function () {
-  if (isMobileScreen) resizegallerySections();
-});
-
 // Contact for submit
 const form = document.querySelector(".contactForm--form-message form");
 const formBtn = document.querySelector(
@@ -579,8 +566,6 @@ let masonryFn = () => {
     ".masonry-container [class*='masonry-wrapper']"
   );
 
-  console.log({ elems });
-
   elems.forEach((elem) => {
     return new Masonry(elem, {
       itemSelector: ".masonry-item",
@@ -594,12 +579,8 @@ let masonryFn = () => {
 // Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
 preloadImages(".grid__item-inner").then(() => {
   initSmoothScrolling();
-  scroll();
   setTimeout(() => window.scrollTo(0, 0), 300);
-  document.body.classList.remove("loading");
-  setTimeout(() => {
-    resizegallerySections();
-  }, 1000);
-
   masonryFn();
+  scroll();
+  document.body.classList.remove("loading");
 });
