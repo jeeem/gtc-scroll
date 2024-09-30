@@ -51,7 +51,30 @@ const grids = document.querySelectorAll(".grid.isDesktop");
 const masonryWraps = document.querySelectorAll(
   ".masonry-wrapper-desktop.withScrollAnimation"
 );
+const sections = document.querySelectorAll("section");
 
+// Function to apply scroll-triggered animations to a given gallery Masonry
+const navLinks = document.querySelectorAll(".nav-link");
+
+const applyAnimationSectionHightlight = (section) => {
+  const timeline = gsap.timeline({
+    defaults: { ease: "none" },
+    scrollTrigger: {
+      trigger: section,
+      start: "top center",
+      end: "bottom top-=5%",
+      scrub: true,
+      // markers: true,
+      onToggle: (self) => self.isActive && setActive(self.trigger.id),
+    },
+  });
+};
+
+function setActive(link) {
+  let activeLinks = document.querySelectorAll(`.scrollTo-${link}`);
+  navLinks.forEach((el) => el.classList.remove("active"));
+  activeLinks.forEach((activeLink) => activeLink.classList.add("active"));
+}
 // Function to apply scroll-triggered animations to a given gallery Masonry
 const applyAnimationMasonry = (masonry) => {
   const masonryItems = masonry.querySelectorAll(".masonry-item");
@@ -494,6 +517,7 @@ const scroll = () => {
   //   applyAnimation(grid, animationType);
   // });
   masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
+  sections.forEach((section) => applyAnimationSectionHightlight(section));
 };
 
 // Scroll to feature
@@ -585,10 +609,10 @@ preloadImages("img.masonry-item").then(() => {
   document.body.classList.remove("loading");
 });
 
-const nameForm = document.querySelector('#nameForm');
-const emailForm = document.querySelector('#emailForm');
-const bodyForm = document.querySelector('#bodyForm');
-const formSubmit = document.querySelector('#submitButton');
+const nameForm = document.querySelector("#nameForm");
+const emailForm = document.querySelector("#emailForm");
+const bodyForm = document.querySelector("#bodyForm");
+const formSubmit = document.querySelector("#submitButton");
 
 const formChanged = () => {
   const emailContent = emailForm.value;
@@ -597,33 +621,37 @@ const formChanged = () => {
   if (emailContent.length) {
     formSubmit.disabled = false;
   } else {
-    formSubmit.disabled = true
+    formSubmit.disabled = true;
   }
-}
+};
 
 const contactFormCallback = (e) => {
   const emailContent = emailForm.value;
   const bodyContent = bodyForm.value;
 
-  const jsonObject = { name: nameForm.value ? nameForm.value : emailContent, email: emailContent, message : bodyContent };
+  const jsonObject = {
+    name: nameForm.value ? nameForm.value : emailContent,
+    email: emailContent,
+    message: bodyContent,
+  };
 
-  fetch('https://www.globaltourcreatives.com/api/?get=contactForm', {
-    method: 'POST',
+  fetch("https://www.globaltourcreatives.com/api/?get=contactForm", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(jsonObject)
+    body: JSON.stringify(jsonObject),
   })
-  .then(response => response.json())
-  .then(data => {
-    // Handle the response data
-    console.log(data);
-  })
-  .catch(error => {
-    // Handle any errors
-    console.error('Error:', error);
-  });
-}
+    .then((response) => response.json())
+    .then((data) => {
+      // Handle the response data
+      console.log(data);
+    })
+    .catch((error) => {
+      // Handle any errors
+      console.error("Error:", error);
+    });
+};
 
 formSubmit.addEventListener("click", (event) => {
   contactFormCallback();
@@ -631,8 +659,8 @@ formSubmit.addEventListener("click", (event) => {
 
 emailForm.addEventListener("change", () => {
   formChanged();
-})
+});
 
 bodyForm.addEventListener("change", () => {
   formChanged();
-})
+});
