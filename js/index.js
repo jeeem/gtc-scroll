@@ -62,8 +62,7 @@ const applyAnimationSectionHightlight = (section) => {
     scrollTrigger: {
       trigger: section,
       start: "top center",
-      end: "bottom top-=5%",
-      scrub: true,
+      end: "bottom center",
       // markers: true,
       onToggle: (self) => self.isActive && setActive(self.trigger.id),
     },

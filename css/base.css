@@ -680,10 +680,21 @@ body #cdawrap {
   width: 100%;
 }
 
-#tourBrandingSection {
-  /* clip-path: circle(50vw at 50% 50vw); */
-  /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
+#tourBrandingSection,
+#circleAnimation2 {
   padding-top: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#tourBrandingSection {
+  background-image: url("/img/backgrounds/TEST_TourBranding.jpg");
+}
+
+#circleAnimation2 {
+  background-image: url("/img/landing-image.jpg");
 }
 
 .scrolldown-container {
@@ -735,6 +746,16 @@ body #cdawrap {
   background-color: rgba(39, 35, 36, 0.8);
   justify-content: space-between;
   padding: 20px 20px;
+}
+
+.nav-outer .sticky-logo,
+.nav-outer.sticky .homepage-logo {
+  display: none;
+}
+
+.nav-outer.sticky .sticky-logo,
+.nav-outer .homepage-logo {
+  display: block;
 }
 
 .nav-outer {
@@ -832,9 +853,13 @@ body #cdawrap {
   justify-content: space-around;
   flex-direction: column;
   margin: 0 20px;
+  color: white;
+  transition: color 0.5s ease-in;
 }
+
 .nav-link.active {
   font-weight: bold;
+  color: #ff0015;
 }
 .nav-top-right {
   margin-left: auto;
