@@ -122,7 +122,7 @@ body.loading {
   background-position: center center;
   background-size: cover;
   display: flex;
-  height: calc(100vh - 150px);
+  height: calc(100vh);
   justify-content: space-around;
   position: relative;
 }
@@ -709,9 +709,10 @@ body #cdawrap {
 .scrolldown-container {
   left: 50%;
   position: absolute;
-  top: 5vh;
+  bottom: 5%;
   transform: translateX(-50%);
 }
+
 #circleAnimation2 {
   /* clip-path: circle(50vw at 50% 60vw); */
   /* clip-path: ellipse(50vw 50vw at 50% 50vw); */
