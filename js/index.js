@@ -53,7 +53,7 @@ const masonryWraps = document.querySelectorAll(
 );
 const sections = document.querySelectorAll("section");
 
-// Function to apply scroll-triggered animations to a given gallery Masonry
+// Function to show which section is active on navigation
 const navLinks = document.querySelectorAll(".nav-link");
 
 const applyAnimationSectionHightlight = (section) => {
@@ -65,6 +65,13 @@ const applyAnimationSectionHightlight = (section) => {
       end: "bottom center",
       // markers: true,
       onToggle: (self) => self.isActive && setActive(self.trigger.id),
+      onLeaveBack: (self) => {
+        const id = self.trigger.id;
+        if (id === "tourBrandingSection") {
+          let links = document.querySelectorAll(`.scrollTo-${id}`);
+          links.forEach((el) => el.classList.remove("active"));
+        }
+      },
     },
   });
 };
