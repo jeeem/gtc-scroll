@@ -457,7 +457,6 @@ body #cdawrap {
   text-align: center;
 }
 .section-tagline .first-subheader {
-  color: white;
   font-weight: 800;
   font-size: 3.25rem;
   margin-bottom: 10px;
@@ -535,7 +534,7 @@ body #cdawrap {
 }
 
 .first-subheader {
-  color: white;
+  color: #ff0015;
   font-weight: 500;
   font-size: 35px;
 }
@@ -1029,11 +1028,6 @@ body #cdawrap {
   .text-container-section-1 {
     max-width: 90%;
   }
-
-  .text-container .text-block {
-    background-color: rgba(39, 35, 36, 0.6);
-  }
-
   .text-container.text-container-section-2 .text-block {
     background-color: rgba(39, 35, 36, 0.6);
   }
