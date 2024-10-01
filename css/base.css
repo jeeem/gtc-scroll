@@ -270,6 +270,10 @@ main {
   width: 100%;
 }
 
+main.with-sticky {
+  margin-top: -115px;
+}
+
 .frame {
   position: relative;
   width: 100%;

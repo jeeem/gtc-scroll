@@ -584,6 +584,21 @@ formBtn.addEventListener("click", (e) => {
 });
 
 // Masonry Functionality
+let brandingMasonryFn = () => {
+  let wrappers = document.querySelectorAll(
+    `#tourBrandingSection .masonry-container [class*='masonry-wrapper']`
+  );
+
+  wrappers.forEach((elem) => {
+    return new Masonry(elem, {
+      itemSelector: ".masonry-item",
+      percentPosition: true,
+      horizontalOrder: true,
+      gutter: 10,
+    });
+  });
+};
+
 let masonryFn = () => {
   let elems = document.querySelectorAll(
     ".masonry-container [class*='masonry-wrapper']"
@@ -599,15 +614,7 @@ let masonryFn = () => {
   });
 };
 
-// Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-preloadImages("img.masonry-item").then(() => {
-  initSmoothScrolling();
-  setTimeout(() => window.scrollTo(0, 0), 300);
-  masonryFn();
-  scroll();
-  document.body.classList.remove("loading");
-});
-
+// * Form Functionslaity
 const nameForm = document.querySelector("#nameForm");
 const emailForm = document.querySelector("#emailForm");
 const bodyForm = document.querySelector("#bodyForm");
@@ -662,4 +669,50 @@ emailForm.addEventListener("change", () => {
 
 bodyForm.addEventListener("change", () => {
   formChanged();
+});
+
+// * Get Branding section Gallery
+const brandMasonryWrapperHTML = document.querySelectorAll(
+  "#tourBrandingSection .masonry-wrapper"
+);
+const imagesCount = 6;
+
+const setBrandingGallery = (data) => {
+  const images = [];
+  data.forEach((imgSCR) => {
+    const img = document.createElement("img");
+    img.src = `https://www.globaltourcreatives.com/api/meta/instagram/images/${imgSCR}`;
+    img.classList.add("masonry-item");
+    images.push(img);
+  });
+
+  brandMasonryWrapperHTML.forEach((wrapper, index) => {
+    const wrapperImages = images.slice(
+      index * imagesCount,
+      index * imagesCount + imagesCount
+    );
+    wrapper.append(...wrapperImages);
+  });
+
+  brandingMasonryFn();
+};
+
+const getBrandingGallery = () => {
+  fetch("https://www.globaltourcreatives.com/api/meta/instagram/images/")
+    .then((blob) => blob.json())
+    .then((data) => setBrandingGallery(data.slice(0, 24)))
+    .catch((err) => console.error(err));
+};
+
+//  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
+onload = (event) => {
+  getBrandingGallery();
+};
+
+preloadImages("img.masonry-item").then(() => {
+  initSmoothScrolling();
+  masonryFn();
+  setTimeout(() => window.scrollTo(0, 0), 300);
+  scroll();
+  document.body.classList.remove("loading");
 });
