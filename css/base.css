@@ -685,7 +685,8 @@ body #cdawrap {
 }
 
 #tourBrandingSection,
-#circleAnimation2 {
+#circleAnimation2,
+#circleAnimation3 {
   padding-top: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -694,11 +695,15 @@ body #cdawrap {
 }
 
 #tourBrandingSection {
-  /* background-image: url("/img/backgrounds/TEST_TourBranding.jpg"); */
+  background-image: url("../img/backgrounds/TourBranding-Coldplay_Large.jpg");
 }
 
 #circleAnimation2 {
-  background-image: url("/img/landing-image.jpg");
+  background-image: url("../img/backgrounds/Promoters-CrowdShot_Large.jpg");
+}
+
+#circleAnimation3 {
+  background-image: url("../img/backgrounds/Venues-Sphere_Large.jpg");
 }
 
 .scrolldown-container {
@@ -1052,15 +1057,37 @@ body #cdawrap {
 /* Background image switches */
 @media (min-width: 901px) and (max-width: 1300px) {
   .homepage {
-    align-items: center;
     background-image: url("../img/backgrounds/LandingPage-Collage_Medium.jpg");
+  }
+
+  #tourBrandingSection {
+    background-image: url("../img/backgrounds/TourBranding-Coldplay_Medium.jpg");
+  }
+
+  #circleAnimation2 {
+    background-image: url("../img/backgrounds/Promoters-CrowdShot_Medium.jpg");
+  }
+
+  #circleAnimation3 {
+    background-image: url("../img/backgrounds/Venues-Sphere_Medium.jpg");
   }
 }
 
 @media screen and (max-width: 900px) {
   .homepage {
-    align-items: center;
     background-image: url("../img/backgrounds/LandingPage-Collage_Mobile.jpg");
+  }
+
+  #tourBrandingSection {
+    background-image: url("../img/backgrounds/TourBranding-Coldplay_Mobile.jpg");
+  }
+
+  #circleAnimation2 {
+    background-image: url("../img/backgrounds/Promoters-CrowdShot_Mobile.jpg");
+  }
+
+  #circleAnimation3 {
+    background-image: url("../img/backgrounds/Venues-Sphere_Mobile.jpg");
   }
 }
 
