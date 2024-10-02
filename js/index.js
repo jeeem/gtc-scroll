@@ -506,26 +506,6 @@ const applyAnimation = (grid, animationType) => {
   }
 };
 
-// Apply animations to each grid
-const scroll = () => {
-  // grids.forEach((grid, i) => {
-  //   // Determine animation type
-  //   let animationType;
-  //   switch (i % 6) {
-  //     case 0:
-  //       // Tour section
-  //       animationType = "galleryScrollLeft";
-  //       break;
-  //     default:
-  //       animationType = "galleryCenterImageStaggerScroll";
-  //       break;
-  //   }
-  //   applyAnimation(grid, animationType);
-  // });
-  masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
-  sectionsHTML.forEach((section) => applyAnimationSectionHightlight(section));
-};
-
 // Scroll to feature
 // Add class "scrollTo-[id]"
 const scrollToBtns = document.querySelectorAll("[class*='scrollTo-']");
@@ -590,28 +570,18 @@ formBtn.addEventListener("click", (e) => {
   formSuccessMessage.classList.toggle("hide");
 });
 
-// Masonry Functionality
-let brandingMasonryFn = () => {
-  let wrappers = document.querySelectorAll(
-    `#tourBrandingSection .masonry-container [class*='masonry-wrapper']`
-  );
+// * Masonry Functionality
+let masonryFn = (id) => {
+  let wrappers = id
+    ? document.querySelectorAll(
+        `#${id} .masonry-container [class*='masonry-wrapper']`
+      )
+    : document.querySelectorAll(
+        ".masonry-container [class*='masonry-wrapper']"
+      );
 
+  console.log({ wrappers, id });
   wrappers.forEach((elem) => {
-    return new Masonry(elem, {
-      itemSelector: ".masonry-item",
-      percentPosition: true,
-      horizontalOrder: true,
-      gutter: 10,
-    });
-  });
-};
-
-let masonryFn = () => {
-  let elems = document.querySelectorAll(
-    ".masonry-container [class*='masonry-wrapper']"
-  );
-
-  elems.forEach((elem) => {
     return new Masonry(elem, {
       itemSelector: ".masonry-item",
       percentPosition: true,
@@ -701,7 +671,8 @@ const setBrandingGallery = (data) => {
     wrapper.append(...wrapperImages);
   });
 
-  brandingMasonryFn();
+  masonryFn("tourBrandingSection");
+  sectionsHTML.forEach((section) => applyAnimationSectionHightlight(section));
 };
 
 const getBrandingGallery = () => {
@@ -711,18 +682,34 @@ const getBrandingGallery = () => {
     .catch((err) => console.error(err));
 };
 
+// * Apply animations to each grid
+const scroll = () => {
+  // grids.forEach((grid, i) => {
+  //   // Determine animation type
+  //   let animationType;
+  //   switch (i % 6) {
+  //     case 0:
+  //       // Tour section
+  //       animationType = "galleryScrollLeft";
+  //       break;
+  //     default:
+  //       animationType = "galleryCenterImageStaggerScroll";
+  //       break;
+  //   }
+  //   applyAnimation(grid, animationType);
+  // });
+  masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
+};
+
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-// onload = (event) => {
-//   getBrandingGallery();
-// };
 
 preloadImages("img.masonry-item").then(() => {
-  getBrandingGallery();
   initSmoothScrolling();
   masonryFn();
   setTimeout(() => {
     window.scrollTo(0, 0);
     scroll();
   }, 300);
+  getBrandingGallery();
   document.body.classList.remove("loading");
 });
