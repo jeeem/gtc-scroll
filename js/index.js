@@ -51,7 +51,7 @@ const grids = document.querySelectorAll(".grid.isDesktop");
 const masonryWraps = document.querySelectorAll(
   ".masonry-wrapper-desktop.withScrollAnimation"
 );
-const sections = document.querySelectorAll("section");
+const sectionsHTML = document.querySelectorAll("section");
 
 // Function to show which section is active on navigation
 const navLinks = document.querySelectorAll(".nav-link");
@@ -63,7 +63,7 @@ const applyAnimationSectionHightlight = (section) => {
       trigger: section,
       start: "top center",
       end: "bottom center",
-      markers: true,
+      // markers: true,
       onToggle: (self) => self.isActive && setActive(self.trigger.id),
       onLeaveBack: (self) => {
         const id = self.trigger.id;
@@ -523,7 +523,7 @@ const scroll = () => {
   //   applyAnimation(grid, animationType);
   // });
   masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
-  sections.forEach((section) => applyAnimationSectionHightlight(section));
+  sectionsHTML.forEach((section) => applyAnimationSectionHightlight(section));
 };
 
 // Scroll to feature
