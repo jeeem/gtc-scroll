@@ -19,6 +19,7 @@
   --grid-gap: 2vw;
   --grid-columns: 4;
   --grid-inner-scale: 1;
+  --masonry-center-mobile: calc(50% - 5px);
 }
 
 body {
@@ -183,7 +184,7 @@ body.loading {
 }
 .masonry-item {
   margin-bottom: 10px;
-  width: calc(33.3vw - 20px);
+  width: calc(33.33333333% - 7px);
 }
 
 .masonry-wrapper-desktop,
@@ -195,7 +196,7 @@ body.loading {
 }
 
 .masonry-wrapper-mobile .masonry-item {
-  width: calc(49vw - 20px);
+  width: var(--masonry-center-mobile);
 }
 
 @media screen and (max-width: 900px) {
@@ -549,7 +550,7 @@ body #cdawrap {
 
 .cta-container {
   position: absolute;
-  bottom: 50px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
   margin-bottom: 70px;
@@ -1004,7 +1005,7 @@ body #cdawrap {
   }
 
   #tourBrandingSection .masonry-item {
-    width: calc(49vw - 20px);
+    width: var(--masonry-center-mobile);
   }
 
   .grid__item {
@@ -1044,7 +1045,8 @@ body #cdawrap {
   }
 
   .CTA-btn {
-    width: 80%;
+    width: 100%;
+    max-width: 300px;
   }
 
   .CTA-btn .contact-btn {
