@@ -223,7 +223,6 @@ a {
 }
 
 a:hover {
-  color: var(--color-link-hover);
   outline: none;
 }
 
@@ -882,13 +881,14 @@ body #cdawrap {
 .nav-top-right-inner {
   background-color: var(--gtc-red);
   color: #f7f7f7;
-  cursor: pointer;
   font-weight: bold;
   text-align: center;
   padding: 8px 0 10px;
   border-radius: 20px;
   font-size: 20px;
+  padding: 10px 20px;
 }
+
 .center-logo {
   width: 200px;
 }

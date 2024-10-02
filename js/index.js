@@ -580,7 +580,6 @@ let masonryFn = (id) => {
         ".masonry-container [class*='masonry-wrapper']"
       );
 
-  console.log({ wrappers, id });
   wrappers.forEach((elem) => {
     return new Masonry(elem, {
       itemSelector: ".masonry-item",
