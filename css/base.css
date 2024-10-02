@@ -110,6 +110,14 @@ body.loading {
   overflow: hidden;
 }
 
+.isDesktop {
+  display: grid;
+}
+
+.isMobile {
+  display: none;
+}
+
 .hide {
   display: none !important;
 }
@@ -530,7 +538,7 @@ body #cdawrap {
   color: black;
 } */
 
-#circleAnimation4 .first-header {
+#contactSection .first-header {
   margin-bottom: 100px;
 }
 
@@ -547,7 +555,8 @@ body #cdawrap {
   font-size: 40px;
 }
 
-.cta-container {
+.cta-container,
+footer {
   position: absolute;
   bottom: 0px;
   width: 100%;
@@ -892,6 +901,18 @@ body #cdawrap {
 .center-logo {
   width: 200px;
 }
+
+footer p {
+  margin: 0;
+  line-height: 1.75rem;
+  font-size: 0.75rem;
+}
+
+footer p a {
+  font-weight: 400;
+  font-style: normal;
+}
+
 @media screen and (min-width: 53em) {
   .frame {
     grid-template-columns: auto auto auto 1fr;
@@ -940,14 +961,6 @@ body #cdawrap {
     font-size: 30px;
     margin-bottom: 50px;
   }
-}
-
-.isDesktop {
-  display: grid;
-}
-
-.isMobile {
-  display: none;
 }
 
 @media screen and (max-width: 900px) {
