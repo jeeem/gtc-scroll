@@ -63,7 +63,7 @@ const applyAnimationSectionHightlight = (section) => {
       trigger: section,
       start: "top center",
       end: "bottom center",
-      // markers: true,
+      markers: true,
       onToggle: (self) => self.isActive && setActive(self.trigger.id),
       onLeaveBack: (self) => {
         const id = self.trigger.id;
@@ -712,15 +712,17 @@ const getBrandingGallery = () => {
 };
 
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-onload = (event) => {
-  getBrandingGallery();
-  scroll();
-};
+// onload = (event) => {
+//   getBrandingGallery();
+// };
 
 preloadImages("img.masonry-item").then(() => {
+  getBrandingGallery();
   initSmoothScrolling();
   masonryFn();
-  setTimeout(() => window.scrollTo(0, 0), 300);
-  scroll();
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+    scroll();
+  }, 300);
   document.body.classList.remove("loading");
 });
