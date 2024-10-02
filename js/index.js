@@ -714,6 +714,7 @@ const getBrandingGallery = () => {
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
 onload = (event) => {
   getBrandingGallery();
+  scroll();
 };
 
 preloadImages("img.masonry-item").then(() => {
