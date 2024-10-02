@@ -9,6 +9,7 @@
   --color-text: #fff;
   --color-bg: #272324;
   --color-link: #fff;
+  --gtc-red: #e91a29;
   --color-link-hover: #907030;
   --color-title: #907030;
   --perspective: 1500px;
@@ -243,7 +244,7 @@ a:not(.card__image):focus-visible {
   /* Draw a very noticeable focus style for
 	 keyboard-focus on browsers that do support
 	 :focus-visible */
-  outline: 2px solid red;
+  outline: 2px solid var(--gtc-red);
   background: transparent;
 }
 
@@ -534,7 +535,7 @@ body #cdawrap {
 }
 
 .first-subheader {
-  color: #ff0015;
+  color: var(--gtc-red);
   font-weight: 500;
   font-size: 35px;
 }
@@ -868,7 +869,7 @@ body #cdawrap {
 
 .nav-link.active {
   font-weight: bold;
-  color: #ff0015;
+  color: var(--gtc-red);
 }
 .nav-top-right {
   margin-left: auto;
@@ -876,7 +877,7 @@ body #cdawrap {
 }
 
 .nav-top-right-inner {
-  background-color: #ff0015;
+  background-color: var(--gtc-red);
   color: #f7f7f7;
   cursor: pointer;
   font-weight: bold;
