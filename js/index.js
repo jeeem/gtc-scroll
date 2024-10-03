@@ -681,7 +681,9 @@ const setBrandingGallery = (data) => {
     wrapper.append(...wrapperImages);
   });
 
-  brandingMasonryFn();
+  setTimeout(() => {
+    brandingMasonryFn();
+  }, 1000);
 };
 
 const getBrandingGallery = () => {
@@ -712,13 +714,13 @@ const scroll = () => {
 };
 
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-getBrandingGallery();
 preloadImages("img.masonry-item").then(() => {
   initSmoothScrolling();
   masonryFn();
+  getBrandingGallery();
   setTimeout(() => {
     window.scrollTo(0, 0);
     scroll();
-  }, 300);
+  }, 1500);
   document.body.classList.remove("loading");
 });
