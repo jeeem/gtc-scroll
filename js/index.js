@@ -683,7 +683,7 @@ const setBrandingGallery = (data) => {
 
   setTimeout(() => {
     brandingMasonryFn();
-  }, 1000);
+  }, 2000);
 };
 
 const getBrandingGallery = () => {
@@ -721,6 +721,6 @@ preloadImages("img.masonry-item").then(() => {
   setTimeout(() => {
     window.scrollTo(0, 0);
     scroll();
-  }, 1500);
+  }, 2500);
   document.body.classList.remove("loading");
 });
