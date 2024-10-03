@@ -585,6 +585,7 @@ let brandingMasonryFn = () => {
         gutter: 10,
       });
     });
+    scroll();
   });
 };
 
@@ -717,11 +718,10 @@ const scroll = () => {
 
 preloadImages("img.masonry-item").then(() => {
   initSmoothScrolling();
-  masonryFn();
   getBrandingGallery();
+  masonryFn();
   setTimeout(() => {
     window.scrollTo(0, 0);
-    scroll();
   }, 300);
   document.body.classList.remove("loading");
 });
