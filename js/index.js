@@ -712,10 +712,7 @@ const scroll = () => {
 };
 
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-window.addEventListener("load", () => {
-  getBrandingGallery();
-});
-
+getBrandingGallery();
 preloadImages("img.masonry-item").then(() => {
   initSmoothScrolling();
   masonryFn();
