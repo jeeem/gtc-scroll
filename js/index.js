@@ -631,7 +631,7 @@ const contactFormCallback = (e) => {
     message: bodyContent,
   };
 
-  fetch("https://www.globaltourcreatives.com/api/?get=contactForm", {
+  fetch("https://www.globaltourcreatives.com/api/?post=contactForm", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
