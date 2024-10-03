@@ -680,16 +680,15 @@ const setBrandingGallery = (data) => {
     );
     wrapper.append(...wrapperImages);
   });
-
-  setTimeout(() => {
-    brandingMasonryFn();
-  }, 2000);
 };
 
 const getBrandingGallery = () => {
   fetch("https://www.globaltourcreatives.com/api/meta/instagram/images/")
     .then((blob) => blob.json())
-    .then((data) => setBrandingGallery(data.slice(0, 24)))
+    .then((data) => {
+      setBrandingGallery(data.slice(0, 24));
+      brandingMasonryFn();
+    })
     .catch((err) => console.error(err));
 };
 
@@ -714,6 +713,7 @@ const scroll = () => {
 };
 
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
+
 preloadImages("img.masonry-item").then(() => {
   initSmoothScrolling();
   masonryFn();
