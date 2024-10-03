@@ -576,12 +576,14 @@ let brandingMasonryFn = () => {
     `#tourBrandingSection .masonry-container [class*='masonry-wrapper']`
   );
 
-  wrappers.forEach((elem) => {
-    return new Masonry(elem, {
-      itemSelector: ".masonry-item",
-      percentPosition: true,
-      horizontalOrder: true,
-      gutter: 10,
+  imagesLoaded(wrappers, function () {
+    wrappers.forEach((elem) => {
+      return new Masonry(elem, {
+        itemSelector: ".masonry-item",
+        percentPosition: true,
+        horizontalOrder: true,
+        gutter: 10,
+      });
     });
   });
 };
@@ -680,15 +682,14 @@ const setBrandingGallery = (data) => {
     );
     wrapper.append(...wrapperImages);
   });
+
+  brandingMasonryFn();
 };
 
 const getBrandingGallery = () => {
   fetch("https://www.globaltourcreatives.com/api/meta/instagram/images/")
     .then((blob) => blob.json())
-    .then((data) => {
-      setBrandingGallery(data.slice(0, 24));
-      brandingMasonryFn();
-    })
+    .then((data) => setBrandingGallery(data.slice(0, 24)))
     .catch((err) => console.error(err));
 };
 
@@ -721,6 +722,6 @@ preloadImages("img.masonry-item").then(() => {
   setTimeout(() => {
     window.scrollTo(0, 0);
     scroll();
-  }, 2500);
+  }, 300);
   document.body.classList.remove("loading");
 });
