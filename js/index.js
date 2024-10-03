@@ -669,9 +669,6 @@ const setBrandingGallery = (data) => {
     );
     wrapper.append(...wrapperImages);
   });
-
-  masonryFn("tourBrandingSection");
-  sectionsHTML.forEach((section) => applyAnimationSectionHightlight(section));
 };
 
 const getBrandingGallery = () => {
@@ -698,6 +695,8 @@ const scroll = () => {
   //   applyAnimation(grid, animationType);
   // });
   masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
+  masonryFn("tourBrandingSection");
+  sectionsHTML.forEach((section) => applyAnimationSectionHightlight(section));
 };
 
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
@@ -705,10 +704,10 @@ const scroll = () => {
 preloadImages("img.masonry-item").then(() => {
   initSmoothScrolling();
   masonryFn();
+  getBrandingGallery();
   setTimeout(() => {
     window.scrollTo(0, 0);
     scroll();
   }, 300);
-  getBrandingGallery();
   document.body.classList.remove("loading");
 });
