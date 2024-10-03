@@ -570,17 +570,28 @@ formBtn.addEventListener("click", (e) => {
   formSuccessMessage.classList.toggle("hide");
 });
 
-// * Masonry Functionality
-let masonryFn = (id) => {
-  let wrappers = id
-    ? document.querySelectorAll(
-        `#${id} .masonry-container [class*='masonry-wrapper']`
-      )
-    : document.querySelectorAll(
-        ".masonry-container [class*='masonry-wrapper']"
-      );
+// Masonry Functionality
+let brandingMasonryFn = () => {
+  let wrappers = document.querySelectorAll(
+    `#tourBrandingSection .masonry-container [class*='masonry-wrapper']`
+  );
 
   wrappers.forEach((elem) => {
+    return new Masonry(elem, {
+      itemSelector: ".masonry-item",
+      percentPosition: true,
+      horizontalOrder: true,
+      gutter: 10,
+    });
+  });
+};
+
+let masonryFn = (id) => {
+  let elems = document.querySelectorAll(
+    ".masonry-container [class*='masonry-wrapper']"
+  );
+
+  elems.forEach((elem) => {
     return new Masonry(elem, {
       itemSelector: ".masonry-item",
       percentPosition: true,
@@ -669,6 +680,8 @@ const setBrandingGallery = (data) => {
     );
     wrapper.append(...wrapperImages);
   });
+
+  brandingMasonryFn();
 };
 
 const getBrandingGallery = () => {
@@ -695,7 +708,6 @@ const scroll = () => {
   //   applyAnimation(grid, animationType);
   // });
   masonryWraps.forEach((masonry) => applyAnimationMasonry(masonry));
-  masonryFn("tourBrandingSection");
   sectionsHTML.forEach((section) => applyAnimationSectionHightlight(section));
 };
 
