@@ -26,6 +26,13 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// *
+const logoHtml = document.querySelector(".gtc-logo-container");
+
+logoHtml.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
+
 // Function to initialize Lenis for smooth scrolling
 const initSmoothScrolling = () => {
   // Instantiate the Lenis object with specified properties
@@ -715,7 +722,6 @@ const scroll = () => {
 };
 
 //  * Preload images, initialize smooth scrolling, apply scroll-triggered animations, and remove loading class from body
-
 preloadImages("img.masonry-item").then(() => {
   initSmoothScrolling();
   getBrandingGallery();

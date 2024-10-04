@@ -783,7 +783,7 @@ footer {
   position: absolute;
   align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   left: 0;
   padding: 50px 40px 20px 40px;
   right: 0;
@@ -795,12 +795,18 @@ footer {
 
 .nav-top-left {
   width: 33%;
+  min-width: 130px;
 }
 
-.nav-top-left img {
+.nav-top-left .gtc-logo-container {
+  display: contents;
+  cursor: pointer;
+}
+
+.nav-top-left .gtc-logo-container img {
   max-width: 130px;
+  width: 100%;
 }
-
 .mobile-hamburger {
   display: none;
 }
